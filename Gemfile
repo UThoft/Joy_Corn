@@ -28,7 +28,6 @@ group :test do
   gem 'database_cleaner', git: 'http://github.com/bmabey/database_cleaner'
 end
 
-GLKJLJL
 
 # Use SCSS for stylesheets
 
