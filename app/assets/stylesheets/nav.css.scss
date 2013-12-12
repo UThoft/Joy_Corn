@@ -1,14 +1,12 @@
-
-
 #navBar{
   list-style-type: none;
 }
 
 .nav {
   width: 100px;
-  height: 40px ;
+  height: 32px ;
   float: left;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   margin: 5px 10px;
 }
@@ -16,12 +14,16 @@
 .nav a{
   display: block;
   text-decoration: none;
-  margin: 12px;
+  color: #222;
+  padding: 9px;
   text-shadow:0 1px 1px rgba(55, 51, 58, 0.5);
 
 }
 
 .nav-current{
   background:#CCCCCC;
+  width: 100px;
+  height: 32px;
+  border-radius: 16px;
 
 }
