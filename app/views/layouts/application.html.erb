@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>JoyCorn</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-  <%= render 'layouts/shim' %>
-</head>
-<body>
-<%= render 'layouts/header' %>
+    <head>
+      <title>JoyCorn</title>
+      <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+      <%= csrf_meta_tags %>
+      <%= render 'layouts/shim' %>
+    </head>
+    <body class="home page page-id-367 page-template-default skin-default gecko not-ie query-page query-post sidebar-none grid3" style>
+        <div id="pagewrap">
+          <div id="header">
+              <%= render 'layouts/header' %>
+          </div>
 
-<div class="container">
-<%= yield %>
+          <div class="container">
+            <%= yield %>
 
-<%= render 'layouts/footer' %>
-</div>
+            <%= render 'layouts/footer' %>
+          </div>
+        </div>
 
-</body>
+    </body>
 </html>
