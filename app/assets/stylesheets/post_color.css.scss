@@ -1,0 +1,287 @@
+/************************************************************************************
+POST COLORS
+*************************************************************************************/
+/* white (default post) */
+.post.white,
+.post {
+  width: 28%;
+  color: #666;
+  border-top: solid 1px #efefef;
+  border-bottom: solid 1px #ccc;
+  border-left: solid 1px #ddd;
+  border-right: solid 1px #ddd;
+  background-color: #fff;
+
+//  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjM1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjY2JSIgc3RvcC1jb2xvcj0iI2FhYWFhYSIgc3RvcC1vcGFjaXR5PSIwLjE1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wNSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+) !important;
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(170, 170, 170, 0.15) 66%, rgba(0, 0, 0, 0.05) 100%) !important;
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(170, 170, 170, 0.15) 66%, rgba(0, 0, 0, 0.05) 100%) !important;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.35) 0%, rgba(170, 170, 170, 0.15) 66%, rgba(0, 0, 0, 0.05) 100%) !important;
+}
+
+.post.white .post-title a, .post .post-title a {
+  color: #444;
+}
+
+.post.white a, .post a {
+  color: #469af1;
+}
+
+/* yellow */
+.post.yellow {
+  color: #806e5e;
+  border-top: solid 1px #f7ed8a;
+  border-bottom: solid 1px #ded471;
+  border-left: solid 1px #eae07b;
+  border-right: solid 1px #eae07b;
+  background-color: #fcf39c;
+}
+
+.post.yellow .post-title a {
+  color: #8c6239;
+}
+
+.post.yellow a {
+  color: #db6212;
+}
+
+/* light-blue */
+.post.light-blue {
+  color: #566368;
+  border-top: solid 1px #d7e6ef;
+  border-bottom: solid 1px #a1c4d6;
+  border-left: solid 1px #c5d8e2;
+  border-right: solid 1px #c5d8e2;
+  background-color: #d2ecfa;
+}
+
+.post.light-blue .post-title a {
+  color: #2b3032;
+}
+
+.post.light-blue a {
+  color: #f26522;
+}
+
+/* pink */
+.post.pink {
+  color: #64555c;
+  border-top: solid 1px #eddde3;
+  border-bottom: solid 1px #e0cad4;
+  border-left: solid 1px #e5d3da;
+  border-right: solid 1px #e5d3da;
+  background-color: #fee3ef;
+}
+
+.post.pink .post-title a {
+  color: #3a2c33;
+}
+
+.post.pink a {
+  color: #bc5b2c;
+}
+
+/* lavender */
+.post.lavender {
+  color: #7c6f82;
+  border-top: solid 1px #e6daeb;
+  border-bottom: solid 1px #d4c3db;
+  border-left: solid 1px #decce5;
+  border-right: solid 1px #decce5;
+  background-color: #f1dcf9;
+}
+
+.post.lavender .post-title a {
+  color: #45394a;
+}
+
+.post.lavender a {
+  color: #af6808;
+}
+
+/* teal */
+.post.teal {
+  color: #4b5c5b;
+  border-top: solid 1px #d3e8e6;
+  border-bottom: solid 1px #b8d8d6;
+  border-left: solid 1px #c5e0de;
+  border-right: solid 1px #c5e0de;
+  background: #caefec;
+}
+
+.post.teal .post-title a {
+  color: #3b4b4a;
+}
+
+.post.teal a {
+  color: #d47a0f;
+}
+
+/* orange */
+.post.orange {
+  color: #665440;
+  border-top: solid 1px #f5ddc4;
+  border-bottom: solid 1px #e8c8a2;
+  border-left: solid 1px #f1d4b5;
+  border-right: solid 1px #f1d4b5;
+  background-color: #fedab2;
+}
+
+.post.orange .post-title a {
+  color: #5c3f1e;
+}
+
+.post.orange a {
+  color: #855015;
+}
+
+/* lime */
+.post.lime {
+  color: #566146;
+  border-top: solid 1px #caef99;
+  border-bottom: solid 1px #b4d883;
+  border-left: solid 1px #bee38d;
+  border-right: solid 1px #bee38d;
+  background-color: #d8f4b1;
+}
+
+.post.lime .post-title a {
+  color: #434d35;
+}
+
+.post.lime a {
+  color: #d47e19;
+}
+
+/* black */
+.post.black {
+  color: #ccc;
+  border-top: solid 1px #5b5b5b;
+  border-bottom: solid 1px #000;
+  border-left: solid 1px #3d3d3d;
+  border-right: solid 1px #3d3d3d;
+  background-color: #111;
+}
+
+.post.black .post-title a {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .8);
+}
+
+.post.black a {
+  color: #fff;
+}
+
+/* rose */
+.post.rose {
+  color: #fbe0e1;
+  border-top: solid 1px #ed9598;
+  border-bottom: solid 1px #e26368;
+  border-left: solid 1px #f08286;
+  border-right: solid 1px #f08286;
+  background-color: #fb6f74;
+}
+
+.post.rose .post-title a {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+}
+
+.post.rose a {
+  color: #fff799;
+}
+
+/* brown */
+.post.brown {
+  color: #fbe0e1;
+  border-top: solid 1px #9b816f;
+  border-bottom: solid 1px #68442c;
+  border-left: solid 1px #92735d;
+  border-right: solid 1px #92735d;
+  background-color: #7b5134;
+}
+
+.post.brown .post-title a {
+  color: #fff799;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+}
+
+.post.brown a {
+  color: #fcf7bb;
+}
+
+/* gray */
+.post.gray {
+  color: #eee;
+  border-top: solid 1px #b5b5b5;
+  border-bottom: solid 1px #8e8e8e;
+  border-left: solid 1px #a6a6a6;
+  border-right: solid 1px #a6a6a6;
+  background-color: #a4a4a4;
+}
+
+.post.gray .post-title a {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .4);
+}
+
+.post.gray a {
+  color: #fff;
+}
+
+/* violet */
+.post.violet {
+  color: #e9dcf1;
+  border-top: solid 1px #a67ac2;
+  border-bottom: solid 1px #7838a0;
+  border-left: solid 1px #a06bbf;
+  border-right: solid 1px #a06bbf;
+  background-color: #873db2;
+}
+
+.post.violet .post-title a {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .4);
+}
+
+.post.violet a {
+  color: #fffbc5;
+}
+
+/* blue */
+.post.blue {
+  color: #d7e9fc;
+  border-top: solid 1px #86b7e8;
+  border-bottom: solid 1px #4e95db;
+  border-left: solid 1px #6ca9e5;
+  border-right: solid 1px #6ca9e5;
+  background-color: #58a6f6;
+}
+
+.post.blue a {
+  color: #fff57c;
+}
+
+.post.blue .post-title a {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+}
+
+/* green */
+.post.green {
+  color: #e4f7ce;
+  border-top: solid 1px #98c663;
+  border-bottom: solid 1px #6aad1d;
+  border-left: solid 1px #81b20e;
+  border-right: solid 1px #81b20e;
+  background-color: #73bd20;
+}
+
+.post.green .post-title a {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+}
+
+.post.green a {
+  color: #fff;
+}
+

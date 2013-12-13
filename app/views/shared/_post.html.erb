@@ -1,0 +1,82 @@
+
+<!--category need to be specified-->
+<% posts = @posts %>
+<% posts.each do |post| %>
+
+    <% if post.media_type == "text" %>
+        <div id="post-box" class="post-147 post type-post status-publish format-status
+        hentry category-status tag-updates yellow isotope-item">
+    <% elsif post.media_type == "image" %>
+        <div id="post-box" class="post-380 post type-post status-publish format-image
+        hentry category-image isotope-item">
+    <% elsif post.media_type == "audio" %>
+        <div id="post-box" class="post-58 post type-post status-publish format-audio
+        hentry category-audio tag-music lavender isotope-item">
+    <% else %>
+        <div id="post-box" class="post-122 post type-post status-publish format-video
+        hentry category-video tag-video-2 black isotope-item">
+    <% end %>
+
+    <!--post icon-->
+
+      <!--some style parameters have to be inserted-->
+            <div class="post-inner clearfix">
+                <span class="post-icon"></span>
+    <!--/post icon-->
+
+    <!--post image-->
+              <% images = get_post_media("image", post.id) %>
+              <% images.each do |image| %>
+                  <% unless image.nil? %>
+                      <% if image.link.include? "http" %>
+                        <% image_src = image.link %>
+                      <% else %>
+                        <% image_src = image_path(image.link) %>
+                      <% end %>
+                      <p class="post-image">
+                        <a href="http://themify.me/demo/themes/wumblr/files/2012/09/86529817.jpg" class="lightbox">
+                          <%= image_tag(image_src, alt: "Lightbox Photo", width: "244") %>
+                        </a>
+                      </p>
+                  <% end %>
+              <% end %>
+    <!--/post image-->
+
+    <!--post audio-->
+    <!--/post audio-->
+
+    <!--post video-->
+    <!--/post video-->
+
+    <!--post content-->
+                <div class="post-content">
+                  <h1 class="post-title">
+                  <%= post.title %>
+                  </h1>
+                  <p>
+                  <% texts = get_post_media("text", post.id) %>
+                  <% texts.each do |text| %>
+                      <% unless text.nil? %>
+                        <%= text.content %>
+                      <% end %>
+                  <% end %>
+                  </p>
+                </div>
+    <!--/post content-->
+
+    <!--post comment-->
+                <div class="post-comment">
+                  <a href="http://themify.me/demo/themes/wumblr/status/another-status-post#respond"
+                     class="comments-link" title="Comment on Another Status Post"><%= post.id %></a>
+                </div>
+    <!--/post comment-->
+
+    <!--post like-->
+    <!--/post like-->
+
+    <!--post meta-->
+    <!--/post meta-->
+
+            </div>
+        </div>
+<% end %>

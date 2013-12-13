@@ -1,0 +1,45 @@
+.post {
+  position: relative;
+  width: 284px;
+  font-size: 90%;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  float: left;
+}
+
+.post .post-inner {
+  position: static;
+}
+
+.post.yellow {
+  color: #806e5e;
+  border-top: solid 1px #f7ed8a;
+  border-bottom: solid 1px #ded471;
+  border-left: solid 1px #eae07b;
+  border-right: solid 1px #eae07b;
+  background-color: #fcf39c;
+}
+
+.post .post-inner .post-comment {
+  position: absolute;
+//  float: right;
+  right: -7px;
+  top: -8px;
+  z-index: 2;
+}
+
+
+.post-comment a {
+  background: url("post-comments.png") no-repeat;
+  width: 46px;
+  height: 34px;
+  display: block;
+  padding: 12px 0 0 1px;
+  text-align: center;
+  color: #666;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: -.1em;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, .7);
+}

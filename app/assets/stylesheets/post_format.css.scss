@@ -1,0 +1,178 @@
+/************************************************************************************
+POST Format
+*************************************************************************************/
+
+
+
+/* standard post */
+
+.post.format-standard .post-inner {
+  background: url("note-bg.png") -118px 14px;
+  padding-left: 75px;
+}
+
+.post.format-standard .post-icon {
+  background: url("pencil-icon.png") no-repeat;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 22px;
+  top: 15px;
+}
+
+/* post image */
+.post-image {
+  max-width: 100%;
+}
+
+.post-image.left {
+  margin-right: 20px;
+}
+
+.post-image.right {
+  margin-left: 20px;
+}
+
+/* lightbox zoom image */
+.post-image .lightbox {
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  max-width: 100%;
+}
+
+.post-image .lightbox .zoom {
+  width: 40px;
+  height: 40px;
+  background: url("icon-zoom.png") no-repeat center center;
+  margin: -20px 0 0 -20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10em;
+}
+
+.post-image .lightbox:hover .zoom {
+  background-color: #000;
+}
+
+/* quote post */
+.post.format-quote .post-inner {
+  background: url("note-bg.png") -118px 17px;
+  padding-left: 75px;
+  padding-right: 30px;
+}
+
+.post.format-quote .quote-content {
+  font: italic 18px/140% Garamond, "Times New Roman", Times, serif;
+}
+
+.post.format-quote .post-icon {
+  background: url("quote-icon-small.png") no-repeat;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 22px;
+  top: 15px;
+}
+
+.post.format-quote .quote-author {
+  margin: 0 0 10px;
+  font-size: 80%;
+  font-style: normal;
+  font-variant: small-caps;
+  text-align: right;
+}
+
+/* link post */
+.post.format-link .post-inner {
+  padding-left: 60px;
+}
+
+.post.format-link .post-icon {
+  background: url("link-icon-small.png") no-repeat;
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  left: 22px;
+  top: 15px;
+}
+
+/* audio post */
+.post.format-audio .audio-image img {
+  float: left;
+  margin: 0 20px 15px 0;
+  padding: 5px;
+  background: #fff;
+  border: solid 1px #ccc;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+  border-radius: 4px;
+}
+
+.post.format-audio .post-content {
+  overflow: hidden;
+}
+
+.post.format-audio .audio-player {
+  margin: 8px 0 10px;
+  min-height: 24px;
+  overflow: hidden;
+}
+
+.post audio {
+  width: 100%;
+}
+
+/* gallery post */
+.post.format-gallery .post-inner {
+  padding: 17px 0 0;
+}
+
+.post.format-gallery .post-icon {
+  background: url("clip-icon.png") no-repeat;
+  width: 30px;
+  height: 61px;
+  position: absolute;
+  left: 10px;
+  top: -7px;
+}
+
+.post.format-gallery .post-content {
+  padding: 0 20px 10px;
+}
+
+.post.format-gallery .post-title {
+  padding: 8px 20px 8px 45px;
+  background: #ce413c url("gallery-title-bg.jpg");
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+  margin-left: -20px;
+  margin-right: -21px;
+}
+
+.post.format-gallery .post-title a {
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+}
+
+.post.format-gallery .post-meta {
+  padding-right: 20px;
+}
+
+/* status post */
+.post.format-status .status-author-avatar img {
+  float: left;
+  margin: 0 14px 15px 0;
+  padding: 3px;
+  background: #fff;
+  border: solid 1px #ccc;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+  border-radius: 4px;
+}
+
+.post.format-status .post-content {
+  margin-top: 10px;
+  overflow: hidden;
+  font-size: 120%;
+  line-height: 160%;
+}
