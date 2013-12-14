@@ -1,23 +1,25 @@
 #logo {
-  position: relative;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-bottom: 50px;
-//  float: left;
+  position: absolute;
+  left: 400px;
+  top: 25px;
+  width: 400px;
+//  border: solid 2px #000000;
+  text-align: center;
 }
 
 #nav-wrap {
-  position: relative;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  position: absolute;
+  left: 5px;
+  bottom: 10px;
   width: 500px;
-  float: left;
+//  border: solid 2px red;
 }
 
 #search-box {
-  position: relative;
-  margin-bottom: 20px;
-  margin-right: 20px;
+  position: absolute;
+  right: 15px;
+  bottom: 13px;
   float: right;
+//  border: solid 2px blue;
 }
 

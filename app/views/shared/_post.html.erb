@@ -2,19 +2,18 @@
 <!--category need to be specified-->
 <% posts = @posts %>
 <% posts.each do |post| %>
-
     <% if post.media_type == "text" %>
-        <div id="post-box" class="post-147 post type-post status-publish format-status
-        hentry category-status tag-updates yellow isotope-item">
+        <div id="post-box" class="post format-status
+        category-status tag-updates yellow">
     <% elsif post.media_type == "image" %>
-        <div id="post-box" class="post-380 post type-post status-publish format-image
-        hentry category-image isotope-item">
+        <div id="post-box" class="post format-image
+        category-image">
     <% elsif post.media_type == "audio" %>
-        <div id="post-box" class="post-58 post type-post status-publish format-audio
-        hentry category-audio tag-music lavender isotope-item">
+        <div id="post-box" class="post format-audio
+        category-audio tag-music lavender">
     <% else %>
-        <div id="post-box" class="post-122 post type-post status-publish format-video
-        hentry category-video tag-video-2 black isotope-item">
+        <div id="post-box" class="post format-video
+        category-video tag-video-2 black">
     <% end %>
 
     <!--post icon-->
@@ -43,9 +42,41 @@
     <!--/post image-->
 
     <!--post audio-->
+              <% audios = get_post_media("audio", post.id) %>
+              <% audios.each do |audio| %>
+                  <% unless audio.nil? %>
+                      <p class="audio-image">
+                        <a href="http://themify.me/demo/themes/wumblr/audio/just-a-mp3-song">
+
+                          <img src="http://themify.me/demo/themes/wumblr/wp-content/themes/wumblr/themify/img.php?src=http://themify.me/demo/themes/wumblr/files/2010/12/Katy-Perry-c07-722638.jpg&amp;w=100&amp;h=100&amp;zc=1"
+                               alt="Just a MP3 Song" width="100" height="100">
+                        </a>
+                      </p>
+
+                      <div class="audio-player">
+                        <div class="audio_wrap html5audio">
+                          <audio controls id="58" class="html5audio">
+                            <source src="http://themify.me/demo/themes/wumblr/files/2010/12/katy.mp3"
+                                    type="audio/mpeg">
+                          </audio>
+                        </div>
+                      </div>
+                  <% end %>
+              <% end %>
     <!--/post audio-->
 
     <!--post video-->
+              <% videos = get_post_media("video", post.id) %>
+              <% videos.each do |video| %>
+                  <% unless video.nil? %>
+                      <div class="post-video">
+                        <iframe src="http://player.vimeo.com/video/6284199" width="500" height="281"
+                                frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+
+                        </iframe>
+                      </div>
+                  <% end %>
+              <% end %>
     <!--/post video-->
 
     <!--post content-->

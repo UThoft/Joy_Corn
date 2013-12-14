@@ -2,16 +2,74 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #pagewrap {
-  width: 918px;
-  margin: 0 auto;
+  position: absolute;
+  width: 1200px;
+  left: 5%;
+  right: 5%;
+//  border: solid 2px;
 }
 
-#headerwrap {
-  margin-top: 50px;
-}
 
 #header {
-  position: relative;
-  height: 170px;
-  width: 918px;
+  background: url("header_bg.png") repeat;
+  position: absolute;
+  height: 180px;
+  width: 1200px;
+//  border: solid 2px yellow;
 }
+
+#main-panel {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100%;
+//  border: solid 2px yellow;
+
+}
+
+#main-panel #sidebar-wrap{
+  position: fixed;
+  left: 70px;
+  top: 210px;
+  width: 250px;
+}
+
+.sidebar-classification{
+  background-color: #FFFFFE ;
+  box-shadow: 1px 1px 5px rgba(55, 51, 58, 0.2);
+  border-radius: 6px;
+  margin: 0 10px 30px 0;
+//  border: solid 2px red;
+}
+
+.sidebar-rank{
+  background-color: #FFFFFE ;
+  box-shadow: 1px 1px 5px rgba(55, 51, 58, 0.2);
+  border-radius: 6px;
+  margin: 0 10px 30px 0;
+}
+
+#container  {
+  position: absolute;
+  left: 245px;
+
+//  border: solid 2px red;
+}
+
+#post-panel {
+//  -webkit-column-count: 4;
+//  -moz-column-count: 4;
+//  column-count: 4;
+//  height: 1000px;
+//  border: solid 2px #000000;
+  clear: both;
+  width: 940px;
+//  -webkit-column-width:250px;
+//  -moz-column-width:250px;
+//  -o-colum-width:250px;
+//  -webkit-column-gap:10px;
+//  -moz-column-gap:10px;
+//  -o-column-gap:10px;
+//  width:940px;
+}
+

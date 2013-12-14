@@ -1,35 +1,32 @@
 .post {
-  position: relative;
-  width: 284px;
+  background: #fff;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+//  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+//  position: relative;
+  width: 200px;
   font-size: 90%;
-  margin-left: 30px;
-  margin-bottom: 30px;
   float: left;
+  display: block;
+//  display:inline-block;
+//  margin-left: 30px;
+//  margin-bottom: 30px;
+
 }
 
-.post .post-inner {
-  position: static;
-}
 
-.post.yellow {
-  color: #806e5e;
-  border-top: solid 1px #f7ed8a;
-  border-bottom: solid 1px #ded471;
-  border-left: solid 1px #eae07b;
-  border-right: solid 1px #eae07b;
-  background-color: #fcf39c;
-}
-
-.post .post-inner .post-comment {
+.post .post-comment {
   position: absolute;
-//  float: right;
   right: -7px;
   top: -8px;
   z-index: 2;
 }
 
 
-.post-comment a {
+.post .post-inner .post-comment a {
   background: url("post-comments.png") no-repeat;
   width: 46px;
   height: 34px;
@@ -42,4 +39,102 @@
   line-height: 100%;
   letter-spacing: -.1em;
   text-shadow: 0 1px 1px rgba(255, 255, 255, .7);
+}
+
+/************************************************************************************
+POST
+*************************************************************************************/
+#post-box {
+//  border: solid 2px #000000;
+//  float: left;
+  display: block;
+}
+
+.post-inner {
+  border-radius: 10px;
+  padding: 15px 20px 5px;
+  position: relative;
+//  border: solid 2px blue;
+}
+
+/* post content */
+.post-content {
+  min-width: 120px;
+}
+
+/* post title */
+.post-title {
+  margin: 0 0 5px;
+  padding: 0;
+  font: bold 140%/120% "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .6);
+}
+
+
+.post-title a {
+  text-decoration: none;
+}
+
+/* post meta */
+.post-meta {
+  font: italic 12px/130% "Times New Roman", Times, serif;
+  text-align: right;
+  clear: both;
+  margin: 20px 0 10px;
+}
+
+.post .post-comment a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+
+/************************************************************************************
+RESET
+*************************************************************************************/
+
+img, fieldset {
+  border: 0;
+}
+
+/* set img max-width */
+img {
+  max-width: 100%;
+  height: auto;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ie 8 img max-width */
+@media \0screen {
+  img {
+    width: auto;
+  }
+}
+
+/* reset iphone text adjust */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+/************************************************************************************
+GENERAL STYLING
+*************************************************************************************/
+
+p {
+  margin: 0 0 1.2em;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #db6212;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+small {
+  font-size: 87%;
 }

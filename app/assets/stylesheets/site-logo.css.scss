@@ -1,17 +1,18 @@
 #site-logo {
-//  position: relative;
-  top: 40px;
-  margin: 0;
-  font: bold 34px/100% Arial, Helvetica, sans-serif;
+  font-family: Arial Rounded MT Bold, Helvetica, Arial, sans-serif;
+  font-size: 65px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: auto;
   letter-spacing: -.05em;
-  color: #444;
+  color: #f4f4f4;
   text-decoration: none;
   text-shadow: 0 1px 2px rgba(0,0,0,.3);
 }
 
 #site-description {
-//  position: relative;
-  top: 85px;
-  margin-top: 10px;
-  font: italic 14px/100% "Times New Roman", Times, serif;
+  margin-top: 20px;
+  color: #e4ebcc;
+  font: italic 20px/100% Brush Script MT, Comic Sans, sans-serif;
 }

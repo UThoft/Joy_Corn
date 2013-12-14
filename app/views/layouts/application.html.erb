@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
     <head>
       <title>JoyCorn</title>
@@ -7,23 +8,36 @@
       <%= csrf_meta_tags %>
       <%= render 'layouts/shim' %>
     </head>
-    <body class="home page page-id-367 page-template-default skin-default gecko not-ie query-page query-post sidebar-none grid3" style>
+    <body>
         <div id="pagewrap">
+
           <div id="header">
               <%= render 'layouts/header' %>
           </div>
+          <div id="main-panel">
+              <div id="sidebar-wrap">
+                <div class="sidebar-classification">
+                  <%= render 'layouts/sidebar_classification' %>
+                </div>
+                <div class="sidebar-rank">
+                  <%= render 'layouts/sidebar_rank' %>
+                </div>
+              </div>
 
+              <div id="container" class="home page page-id-367 page-template-default skin-default gecko not-ie query-page query-post sidebar-none grid3">
+                <%= yield %>
 
-            <%= render 'layouts/sidebar' %>
+                <!--<div id="post-panel" class="js-masonry" data-masonry-options='{ "itemSelector": "#post-box"}'>-->
+                <div id="post-panel">
+                  <%= render 'shared/post' %>
+                </div>
 
+                <%= render 'layouts/footer' %>
 
-          <div class="container">
-            <%= yield %>
-
-            <%= render 'layouts/footer' %>
-
-            <%= debug(params) if Rails.env.development? %>
+                <%= debug(params) if Rails.env.development? %>
+              </div>
           </div>
+
         </div>
 
     </body>
