@@ -33,29 +33,29 @@ POST Format
   margin-left: 20px;
 }
 
-/* lightbox zoom image */
-.post-image .lightbox {
-  position: relative;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-  max-width: 100%;
-}
-
-.post-image .lightbox .zoom {
-  width: 40px;
-  height: 40px;
-  background: url("icon-zoom.png") no-repeat center center;
-  margin: -20px 0 0 -20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 10em;
-}
-
-.post-image .lightbox:hover .zoom {
-  background-color: #000;
-}
+///* lightbox zoom image */
+//.post-image .lightbox {
+//  position: relative;
+//  display: inline-block;
+//  zoom: 1;
+//  *display: inline;
+//  max-width: 100%;
+//}
+//
+//.post-image .lightbox .zoom {
+//  width: 40px;
+//  height: 40px;
+//  background: url("icon-zoom.png") no-repeat center center;
+//  margin: -20px 0 0 -20px;
+//  position: absolute;
+//  top: 50%;
+//  left: 50%;
+//  border-radius: 10em;
+//}
+//
+//.post-image .lightbox:hover .zoom {
+//  background-color: #000;
+//}
 
 /* quote post */
 .post.format-quote .post-inner {

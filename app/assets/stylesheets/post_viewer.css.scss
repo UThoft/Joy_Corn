@@ -1,0 +1,62 @@
+#post-viewer{
+  display: none;
+  height: 500px;
+  width: 900px;
+}
+
+#post-viewer-content{
+  float: left;
+  background-color: #0088cc;
+  height: 500px;
+  width: 600px;
+}
+
+#viewer-title{
+  width: 100%;
+  background: rgba(20,20,20,0.5);
+  z-index: 10000;
+  padding: 10px 0;
+  height: 20px;
+}
+
+#viewer-title h3{
+  float: left;
+  margin:0 8px;
+}
+
+#viewer-title a{
+  float: right;
+  margin: 0 8px;
+  font-size: 12px;
+  color: #FFFFFE;
+}
+
+#post-viewer-comment{
+  float: left;
+  background-color: #FFFEFE;
+  padding: 10px;
+  width: 280px;
+  height: 480px;
+}
+
+#post-viewer-author{
+  width: 100%;
+  height: 50px;
+  background: #f08080;
+  margin-bottom: 10px;
+}
+
+#post-viewer-description{
+  width: 100%;
+  min-height: 80px;
+  background: #ffa07a;
+  margin-bottom: 20px;
+}
+
+.viewer-comment-item{
+  width: 100%;
+  min-height: 40px;
+  margin-bottom: 5px;
+  background: #add8e6;
+}
+

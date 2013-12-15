@@ -33,9 +33,12 @@
                         <% image_src = image_path(image.link) %>
                       <% end %>
                       <p class="post-image">
-                        <a href="http://themify.me/demo/themes/wumblr/files/2012/09/86529817.jpg" class="lightbox">
-                          <%= image_tag(image_src, alt: "Lightbox Photo", width: "244") %>
+                        <!--<a href="http://themify.me/demo/themes/wumblr/files/2012/09/86529817.jpg" class="lightview">-->
+                        <a href="#post-viewer" class="lightview" >
+                           <%= image_tag(image_src, alt: "Lightbox Photo", width: "244") %>
                         </a>
+
+                        <!--<div id="viewer">hello</div>-->
                       </p>
                   <% end %>
               <% end %>
@@ -82,7 +85,9 @@
     <!--post content-->
                 <div class="post-content">
                   <h1 class="post-title">
-                  <%= post.title %>
+                    <a href="#post-viewer" class="lightview">
+                      <%= post.title %>
+                    </a>
                   </h1>
                   <p>
                   <% texts = get_post_media("text", post.id) %>

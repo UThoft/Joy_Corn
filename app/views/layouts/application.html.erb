@@ -24,7 +24,7 @@
                 </div>
               </div>
 
-              <div id="container" class="home page page-id-367 page-template-default skin-default gecko not-ie query-page query-post sidebar-none grid3">
+              <div id="container" class="home page page-id-367 page-template-default skin-default gecko not-ie query-page query-post sidebar-none">
                 <%= yield %>
 
                 <!--<div id="post-panel" class="js-masonry" data-masonry-options='{ "itemSelector": "#post-box"}'>-->
@@ -39,6 +39,8 @@
           </div>
 
         </div>
+
+        <%= render 'shared/post_viewer' %>
 
     </body>
 </html>
