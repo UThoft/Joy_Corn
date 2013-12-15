@@ -14,6 +14,7 @@
           <div id="header">
               <%= render 'layouts/header' %>
           </div>
+
           <div id="main-panel">
               <div id="sidebar-wrap">
                 <div class="sidebar-classification">
@@ -30,11 +31,22 @@
                 <!--<div id="post-panel" class="js-masonry" data-masonry-options='{ "itemSelector": "#post-box"}'>-->
                 <div id="post-panel">
                   <%= render 'shared/post' %>
+
+                  <div class="page-nav">
+                    <%# link_to('next page', static_pages_next_url, class: "next_post_panel") %>
+                    <a href="/page/2">next page</a>
+                  </div>
+
+                  <div id="footer">
+                    <%= render 'layouts/footer' %>
+                  </div>
                 </div>
 
-                <%= render 'layouts/footer' %>
 
-                <%= debug(params) if Rails.env.development? %>
+
+
+
+                <%# debug(params) if Rails.env.development? %>
               </div>
           </div>
 

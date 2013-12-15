@@ -1,6 +1,8 @@
 JoyCorn::Application.routes.draw do
+  match 'page/:id' => 'static_pages#next', via:[:GET]
   get "static_pages/index"
   get "static_pages/help"
+  get "static_pages/next"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
