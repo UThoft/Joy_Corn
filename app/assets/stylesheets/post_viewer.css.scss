@@ -5,14 +5,13 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  background: #000000;
 //  overflow: hidden;
 }
 
 // left side
 #post-viewer-left{
   float: left;
-  background-color: #000000;
+//  background-color: #000000;
   height: 100%;
   width: 70%;
   display: table;
@@ -20,18 +19,19 @@
 
 #post-viewer-left #viewer-title{
   width: 100%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(120, 50, 50, 0.3);
   z-index: 10000;
   padding: 10px 0;
-  height: 20px;
+  height: 50px;
   display: table-header-group;
 }
 
-#viewer-title h3{
+#viewer-title h2{
   float: left;
   width: 100%;
-  margin:0 8px;
-  color: #e4ebcc;
+  pading:15px;
+  color: #7b5134;
+  font-size: 42px;
 }
 
 #viewer-title a{
@@ -45,22 +45,22 @@
   display: table-cell;
   max-height: 90%;
   max-width: 90%;
-  padding: 10px;
 
 }
 
-#post-viewer-content .format-text {
-  background-color: #f4d99c;
+#post-viewer-media.format-text {
+  height: 100%;
+  padding: 20px;
+  background-image: url(Wood.jpg);
+}
+.viewer-text-format{
+  font-weight: bolder;
+  font-size: 28px;
 }
 
-#post-viewer-content .format-image img{
-  max-height: 100%;
-  max-width: 100%;
-}
-
-#post-viewer-content .format-audio audio {
-  max-height: 100%;
-  max-width: 100%;
+#post-viewer-media.post-view .post-image {
+  height: auto;
+  width: auto;
 }
 
 

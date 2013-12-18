@@ -15,9 +15,9 @@
 
   <div id="post-viewer-left">
     <div id="viewer-title" class="h-align">
-      <h3 class="h-align">
+      <h2 class="h-align">
         <%= post.title %>
-      </h3>
+      </h2>
     </div>
 
     <!-- post media -->
@@ -29,10 +29,12 @@
         <% if post.media_type == "text" %>
             <div id="post-viewer-media" class="post-view format-text
             category-status tag-updates">
-              <% text = post.texts.first %>
-              <% unless text.nil? %>
+              <div class="viewer-text-format">
+                <% text = post.texts.first %>
+                <% unless text.nil? %>
                   <%= text.content %>
-              <% end %>
+                <% end %>
+              </div>
         <% elsif post.media_type == "image" %>
             <div id="post-viewer-media" class="post-view format-image
             category-image">
@@ -101,14 +103,13 @@
   <div id="post-viewer-right">
     <div id="post-viewer-author">
         <div class="post-author-picture">
+          <%= image_tag("admin.jpeg", class:"author-photo") %>
 
         </div>
         <div class="post-author-info">
           <div class="post-author-name">
-            <span class="post-author">
                 <%# user = get_post_author(post.user_id) %>
               <%= post.user.name %>
-            </span>
           </div>
           <div class="post-date">
             <%= time_ago_in_words(post.created_at) + " ago" %>
@@ -122,6 +123,7 @@
       <% tags.each do |tag| %>
           <%= tag.name + " " unless tag.nil? %>
       <% end %>
+      funny
     </div>
 
     <div class="viewer-comment-item">

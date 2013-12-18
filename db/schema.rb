@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20131213021805) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "audios", force: true do |t|
     t.integer "post_id"
     t.string  "link",    null: false
@@ -27,11 +24,11 @@ ActiveRecord::Schema.define(version: 20131213021805) do
   end
 
   create_table "posts", force: true do |t|
-    t.string   "type",                  null: false
+    t.string   "type",       null: false
+    t.boolean  "like",       null: false
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title",      limit: 32
   end
 
   create_table "posts_tags", id: false, force: true do |t|
@@ -50,7 +47,7 @@ ActiveRecord::Schema.define(version: 20131213021805) do
 
   create_table "texts", force: true do |t|
     t.integer "post_id"
-    t.string  "content", limit: 1024, null: false
+    t.string  "content", limit: 250, null: false
   end
 
   create_table "users", force: true do |t|
