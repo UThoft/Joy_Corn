@@ -1,7 +1,6 @@
 $(document).ready(function(){
-    var temp = gon.global.current_menu;
 //    an array.
-    var menu = $(temp)[0];
+    var menu = $(gon.global.current_menu)[0];
     if (menu == null)
     {
 
@@ -36,13 +35,13 @@ function closeOtherMenus(my_menu) {
 
 //EASY TABS 1.2 - MENU SETTINGS
 //Set the id names of your tablink (without a number at the end)
-var tablink_idname = new Array("tablink")
+var tablink_idname = new Array("tablink");
 //Set the id name of your tabcontentarea (without a number at the end)
-var tabcontent_idname = new Array("tabcontent")
+var tabcontent_idname = new Array("tabcontent");
 //Set the number of your tabs
-var tabcount = new Array("3")
+var tabcount = new Array("3");
 //Set the Tab which should load at start (In this Example:Tab 2 visible on load)
-var loadtabs = new Array("2")
+var loadtabs = new Array("2");
 //Set the Number of the Menu which should autochange (if you dont't want to have a change menu set it to 0)
 var autochangemenu = 0;
 //the speed in seconds when the tabs should change
@@ -87,4 +86,4 @@ window.onload=function(){
     do {easytabs(b, loadtabs[a]);  a++; b++;}
     while (b<=menucount);
     if (autochangemenu!=0){start_autochange();}
-}
+};

@@ -38,6 +38,7 @@
         <% elsif post.media_type == "image" %>
             <div id="post-viewer-media" class="post-view format-image
             category-image">
+
               <% image = post.images.first %>
               <% unless image.nil? %>
                   <% if image.link.include? "http" %>
@@ -55,16 +56,15 @@
             category-audio tag-music">
               <% audio = post.audios.first %>
               <% unless audio.nil? %>
-                  <p class="audio-image">
-                      <img src="http://themify.me/demo/themes/wumblr/wp-content/themes/wumblr/themify/img.php?src=http://themify.me/demo/themes/wumblr/files/2010/12/Katy-Perry-c07-722638.jpg"
-                           alt="Just a MP3 Song">
-                  </p>
+                  <!--<p class="audio-image">-->
+                      <!--<img src="http://themify.me/demo/themes/wumblr/wp-content/themes/wumblr/themify/img.php?src=http://themify.me/demo/themes/wumblr/files/2010/12/Katy-Perry-c07-722638.jpg"-->
+                           <!--alt="Just a MP3 Song">-->
+                  <!--</p>-->
 
                   <div class="audio-player">
                     <div class="audio_wrap html5audio">
                       <audio controls id="58" class="html5audio">
-                        <source src="http://themify.me/demo/themes/wumblr/files/2010/12/katy.mp3"
-                                type="audio/mpeg">
+                        <source src="<%= audio.link %>" type="audio/mpeg">
                       </audio>
                     </div>
                   </div>
@@ -76,10 +76,7 @@
               <% video = post.videos.first %>
               <% unless video.nil? %>
                   <div class="post-video">
-                    <iframe src="http://player.vimeo.com/video/6284199" width="500" height="281"
-                            frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
-
-                    </iframe>
+                    <iframe width="560" height="315" src="<%= video.link %>" frameborder="0" allowfullscreen></iframe>
                   </div>
               <% end %>
 

@@ -43,7 +43,7 @@
  display: inline;
  position: relative;
  float: left;
- z-index: none;
+ z-index: 0;
 }
 
 .lv_skin * {
@@ -137,6 +137,7 @@
 .lv_content_wrapper canvas {
 	float: left;
 	zoom: 1;
+
 }
 
 .lv_content {
@@ -513,7 +514,7 @@
 }
 .lv_thumbnail_image img { position: absolute; }
 .lv_thumbnail_active .lv_thumbnail_image {
-	filter: alpha(opacity=35);
+//	filter: alpha(opacity=35);
 	opacity: .35;
 	display: inline;
 }

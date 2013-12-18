@@ -5,7 +5,7 @@ module StaticPagesHelper
     Tag.all.each do |tag|
     tag_hash[tag.name] = tag.posts.size
     end
-    tag_hash.sort[0, 10]
+    tag_hash.sort_by {|_, x| x}.reverse[0, 10]
   end
 
 end

@@ -1,18 +1,26 @@
 #post-viewer{
   //  display: none;
+  position: absolute;
   height: 100%;
   //  height: 500px;
   width: 100%;
   margin: 0;
   padding: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
 //  background: #000000;
-  //  border: solid 2px red;
+//  border: solid 0.5px red;
+
   //  overflow: hidden;
 }
 
 /*-------viewer left side begin-----------*/
 #post-viewer-left{
-  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
 //  background-color: #000000;
   height: 100%;
   width: 70%;
@@ -27,8 +35,9 @@
   z-index: 10000;
   padding: 0;
   margin: 0px;
-//  height: 10%;
-  display: table-header-group;
+  height: auto;
+//  display: table-caption;
+//  border: solid 2px green;
 }
 
 #viewer-title h2{
@@ -49,31 +58,74 @@
 
 /*-------------viewer content--------------*/
 #post-viewer-left #post-viewer-content {
-  display: table-cell;
-  max-height: 100%;
-  max-width: 100%;
-  padding-top: 10px;
+
+//  border: solid 0.5px yellow;
+  height: 100%;
+  position: relative;
+  right: 0;
+  left: 0;
+  width: 100%;
+  display: table;
+
+//  padding-top: 10px;
   //padding-bottom: 10px;
+
 }
 
 #post-viewer-content .format-text {
-  background-image: url(Wood.jpg);
-  padding: 15px;
+  background: url(Wood.jpg) repeat;
+//  margin-left: -15px;
+  position: relative;
+  height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: table;
+//  border: solid 2px red;
+//  line-height: 500px;
+}
+
+#post-viewer-content .format-image {
+//  border: solid 2px #ffffff;
+  position: absolute;
+
+  max-height: 100%;
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 500px; // only works for image
 }
 
 .viewer-text-format{
+
+  display: table-cell;
+  vertical-align: middle;
+
   font-size: 28px;
   color: #4e3624;
   text-align: left;
+  padding-left: 10px;
+  max-width: 100%;
+  
 }
 
 #post-viewer-content .format-image img{
   //  position: absolute;
   //  height: 100%;
+//  line-height: 100%;
+  position: relative;
   max-width: 95%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  vertical-align: middle;
   //  max-height: 100%;
   //  resize: vertical;
-  overflow: scroll;
+//  overflow: scroll;
 }
 
 #post-viewer-content .format-audio audio {
