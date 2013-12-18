@@ -1,5 +1,15 @@
 $(document).ready(function(){
-   document.getElementById(gon.global.current_menu).style.display = 'block';
+    var temp = gon.global.current_menu;
+//    an array.
+    var menu = $(temp)[0];
+    if (menu == null)
+    {
+
+    }
+    else
+    {
+        menu.style.display = "block";
+    }
 });
 
 function showMenu(id_menu){
@@ -10,7 +20,7 @@ function showMenu(id_menu){
     } else {
         my_menu.style.display="none";
     }
-    gon.global.current_menu = my_menu;
+    gon.global.current_menu = "#" + my_menu.id;
 }
 
 function closeOtherMenus(my_menu) {

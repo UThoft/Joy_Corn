@@ -138,7 +138,7 @@ Lightview.Skins = {
         },
         keyboard: false,
         mousewheel: false,
-        viewport: 'crop'
+        viewport: 'scale'
       },
       image: {
         viewport: 'scale'

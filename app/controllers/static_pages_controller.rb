@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
     $current_index = 0
     $search_type = 'topic'
     $keyword = 'default'
-    gon.global.current_menu = '#topics'
+    gon.global.current_menu = "#topics"
   end
 
   def help

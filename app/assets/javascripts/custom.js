@@ -1,4 +1,4 @@
-var ready = function(){
+$(document).ready(function(){
 
     var $container = $('#post-panel');
 
@@ -38,11 +38,7 @@ var ready = function(){
             });
         }
     );
-};
-
-$(document).ready(ready);
-$(document).on('page:load', ready);
-$(document).on('page:fetch', ready);
+});
 
 //function home_button() {
 //      window.location = getBaseURL()
