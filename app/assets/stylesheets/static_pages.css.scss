@@ -1,8 +1,14 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  margin: 0;
+}
+
 html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 //  border: solid 2px;
 }
 
@@ -11,8 +17,13 @@ html, body {
   width: 1200px;
 //  min-height: 1500px;
   min-height: 100%;
+//  height: auto !important;
+  height: 100%;
+//  margin: 0 auto -4em;
 //  top: 0px;
 //  bottom: 0px;
+  margin: 0;
+  padding: 0;
   left: 5%;
   right: 5%;
 //  border: solid 2px;
@@ -32,6 +43,7 @@ html, body {
   top: 200px;
   left: 0;
   width: 100%;
+  min-height: 100%;
 //  border: solid 2px yellow;
 
 }
@@ -61,7 +73,8 @@ html, body {
 #container  {
   position: absolute;
   left: 245px;
-
+  min-height: 100%;
+  height: auto;
 //  border: solid 2px red;
 }
 
@@ -95,13 +108,14 @@ html, body {
 
 
 #footer {
-//  clear: both;
+  clear: both;
   position: absolute;
   bottom: -20px;
 //  padding-top: 30px;
 //  left: 20px;
 //  float: left;
-  width: 100%;
+  width: 940px;
+
   //margin-top: 200px;
 //  border: solid 2px #000000;
 //  padding-top: 50px;

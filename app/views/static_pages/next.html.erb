@@ -1,1 +1,10 @@
 <% @posts = next_post_panel %>
+
+<div id="post-panel">
+  <%= render 'shared/post' %>
+
+  <div class="page-nav">
+    <%# link_to('next page', static_pages_next_url, class: "next_post_panel") %>
+    <a href="/page/2">next page</a>
+  </div>
+</div>

@@ -1,42 +1,71 @@
 #post-viewer{
-  display: none;
-  height: 500px;
-  width: 900px;
-}
-
-#post-viewer-content{
-  float: left;
-  background-color: #0088cc;
-  height: 500px;
-  width: 600px;
-}
-
-#viewer-title{
+//  display: none;
+  height: 100%;
+//  height: 500px;
   width: 100%;
-  background: rgba(20,20,20,0.5);
+  margin: 0;
+  padding: 0;
+  background: #000000;
+//  overflow: hidden;
+}
+
+// left side
+#post-viewer-left{
+  float: left;
+  background-color: #000000;
+  height: 100%;
+  width: 70%;
+  display: table;
+}
+
+#post-viewer-left #viewer-title{
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
   z-index: 10000;
   padding: 10px 0;
   height: 20px;
+  display: table-header-group;
 }
 
 #viewer-title h3{
   float: left;
+  width: 100%;
   margin:0 8px;
+  color: #e4ebcc;
 }
 
 #viewer-title a{
   float: right;
   margin: 0 8px;
   font-size: 12px;
-  color: #FFFFFE;
+  color: #fffffe;
 }
 
-#post-viewer-comment{
+#post-viewer-left #post-viewer-content {
+  display: table-cell;
+  max-height: 90%;
+  max-width: 90%;
+
+}
+
+#post-viewer-media.format-text {
+  background-color: #f4d99c;
+}
+
+#post-viewer-media.post-view .post-image {
+  height: auto;
+  width: auto;
+}
+
+
+
+// right side
+#post-viewer-right{
   float: left;
-  background-color: #FFFEFE;
-  padding: 10px;
-  width: 280px;
-  height: 480px;
+  background-color: #ffffff;
+  height: 100%;
+  width: 30%;
+
 }
 
 #post-viewer-author{
@@ -45,6 +74,7 @@
   background: #f08080;
   margin-bottom: 10px;
 }
+
 
 #post-viewer-description{
   width: 100%;
@@ -59,4 +89,6 @@
   margin-bottom: 5px;
   background: #add8e6;
 }
+
+
 

@@ -107,7 +107,7 @@ Lightview.Skins = {
     },
     spinner: { },
     thumbnail: { icon: false },
-    viewport: 'scale',
+    viewport: false,
     wrapperClass: false,
     
     initialTypeOptions: {
@@ -134,7 +134,7 @@ Lightview.Skins = {
         width: '100%',
         height: '100%',
         attr: {
-          scrolling: 'auto'
+          scrolling: 'no'
         },
         keyboard: false,
         mousewheel: false,

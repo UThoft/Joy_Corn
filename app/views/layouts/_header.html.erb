@@ -7,10 +7,12 @@
   <div id="nav-wrap">
     <ul id="navBar">
       <li class="nav nav-current">
-          <a href="#">HOME</a>
+          <!--<a href= "#" onclick="reloadPage()">HOME-->
+          <!--</a>-->
+        <a href="#" onclick="home_button()">HOME</a>
       </li>
       <li class="nav" >
-          <a href="#">HELP</a>
+         <%= link_to "HELP", static_pages_help_url %>
       </li>
     </ul>
   </div>

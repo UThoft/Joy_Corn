@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function(){
 
     var $container = $('#post-panel');
 
@@ -11,13 +11,6 @@ $(function(){
             columnWidth: 10
         });
     });
-
-//    $('.infinite-scroll').jscroll({
-//        loadingHtml: '<img src="loading.gif" alt="Loading" /> Loading...',
-//        padding: 20,
-//        nextSelector: 'a.jscroll-next:last',
-//        contentSelector: 'li'
-//    });
 
     $container.infinitescroll({
 //            debug        : true,
@@ -46,3 +39,29 @@ $(function(){
         }
     );
 });
+
+function home_button() {
+      window.location = getBaseURL()
+}
+
+function getBaseURL() {
+    var url = location.href;  // entire url including querystring - also: window.location.href;
+    var baseURL = url.substring(0, url.indexOf('/', 14));
+
+
+    if (baseURL.indexOf('http://localhost') != -1) {
+        // Base Url for localhost
+        url = location.href;  // window.location.href;
+        var pathname = location.pathname;  // window.location.pathname;
+        var index1 = url.indexOf(pathname);
+        var index2 = url.indexOf("/", index1 + 1);
+        var baseLocalUrl = url.substr(0, index2);
+
+        return baseLocalUrl + "/";
+    }
+    else {
+        // Root Url for domain name
+        return baseURL + "/";
+    }
+
+}

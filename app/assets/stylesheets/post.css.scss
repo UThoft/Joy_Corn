@@ -60,6 +60,8 @@ POST
 /* post content */
 .post-content {
   min-width: 120px;
+  max-height: 300px;
+  overflow: hidden;
 }
 
 /* post title */

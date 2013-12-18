@@ -1,0 +1,140 @@
+<%# render 'shared/post_viewer' %>
+<!DOCTYPE html>
+
+<html>
+<head>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
+</head>
+<body>
+<% post = @post %>
+<div id="post-viewer">
+
+
+  <div id="post-viewer-left">
+    <div id="viewer-title" class="h-align">
+      <h3 class="h-align">
+        <%= post.title %>
+      </h3>
+    </div>
+
+    <!-- post media -->
+    <!-- if the media is small then keep it, if too
+    large then fit the window (max size should be set) -->
+    <div id = "post-viewer-content" class="h-align v-align">
+
+
+        <% if post.media_type == "text" %>
+            <div id="post-viewer-media" class="post-view format-text
+            category-status tag-updates">
+              <% text = post.texts.first %>
+              <% unless text.nil? %>
+                  <%= text.content %>
+              <% end %>
+        <% elsif post.media_type == "image" %>
+            <div id="post-viewer-media" class="post-view format-image
+            category-image">
+              <% image = post.images.first %>
+              <% unless image.nil? %>
+                  <% if image.link.include? "http" %>
+                      <% image_src = image.link %>
+                  <% else %>
+                      <% image_src = image_path(image.link) %>
+                  <% end %>
+                  <!--<p class="post-image">-->
+                    <!--<a href="http://themify.me/demo/themes/wumblr/files/2012/09/86529817.jpg" class="lightview">-->
+                      <%= image_tag(image_src) %>
+                  <!--</p>-->
+              <% end %>
+        <% elsif post.media_type == "audio" %>
+            <div id="post-viewer-media" class="post-view format-audio
+            category-audio tag-music">
+              <% audio = post.audios.first %>
+              <% unless audio.nil? %>
+                  <p class="audio-image">
+                    <a href="http://themify.me/demo/themes/wumblr/audio/just-a-mp3-song">
+
+                      <img src="http://themify.me/demo/themes/wumblr/wp-content/themes/wumblr/themify/img.php?src=http://themify.me/demo/themes/wumblr/files/2010/12/Katy-Perry-c07-722638.jpg&amp;w=100&amp;h=100&amp;zc=1"
+                           alt="Just a MP3 Song">
+                    </a>
+                  </p>
+
+                  <div class="audio-player">
+                    <div class="audio_wrap html5audio">
+                      <audio controls id="58" class="html5audio">
+                        <source src="http://themify.me/demo/themes/wumblr/files/2010/12/katy.mp3"
+                                type="audio/mpeg">
+                      </audio>
+                    </div>
+                  </div>
+              <% end %>
+        <% else %>
+            <div id="post-viewer-media" class="post-view format-video
+            category-video tag-video-2">
+
+              <% video = post.videos.first %>
+              <% unless video.nil? %>
+                  <div class="post-video">
+                    <iframe src="http://player.vimeo.com/video/6284199" width="500" height="281"
+                            frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+
+                    </iframe>
+                  </div>
+              <% end %>
+
+        <% end %>
+
+    </div>
+
+    <!-- assume that the post can just have one non-text media -->
+
+
+        </div>
+
+    <!-- like button float on the bottom of the image -->
+
+  </div>
+
+
+    <!-- post comment -->
+
+
+  <div id="post-viewer-right">
+    <div id="post-viewer-author">
+        <div class="post-author-picture">
+
+        </div>
+        <div class="post-author-info">
+          <div class="post-author-name">
+            <span class="post-author">
+                <%# user = get_post_author(post.user_id) %>
+              <%= post.user.name %>
+            </span>
+          </div>
+          <div class="post-date">
+            <%= time_ago_in_words(post.created_at) + " ago" %>
+          </div>
+        </div>
+
+    </div>
+
+    <div id="post-tags">
+      <% tags = post.tags %>
+      <% tags.each do |tag| %>
+          <%= tag.name + " " unless tag.nil? %>
+      <% end %>
+    </div>
+
+    <div class="viewer-comment-item">
+    </div>
+    <div class="viewer-comment-item">
+    </div>
+    <div class="viewer-comment-item">
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -24,7 +24,8 @@
     <!--/post icon-->
 
     <!--post image-->
-              <% images = get_post_media("image", post.id) %>
+              <%# images = get_post_media("image", post.id) %>
+              <% images = post.images %>
               <% images.each do |image| %>
                   <% unless image.nil? %>
                       <% if image.link.include? "http" %>
@@ -45,7 +46,8 @@
     <!--/post image-->
 
     <!--post audio-->
-              <% audios = get_post_media("audio", post.id) %>
+              <%# audios = get_post_media("audio", post.id) %>
+              <% audios = post.audios %>
               <% audios.each do |audio| %>
                   <% unless audio.nil? %>
                       <p class="audio-image">
@@ -69,7 +71,7 @@
     <!--/post audio-->
 
     <!--post video-->
-              <% videos = get_post_media("video", post.id) %>
+              <% videos = post.videos %>
               <% videos.each do |video| %>
                   <% unless video.nil? %>
                       <div class="post-video">
@@ -85,12 +87,14 @@
     <!--post content-->
                 <div class="post-content">
                   <h1 class="post-title">
-                    <a href="#post-viewer" class="lightview">
-                      <%= post.title %>
-                    </a>
+                    <!--<a href="#post-viewer" class="lightview">-->
+                      <!---->
+                      <!--<%# post.title %>-->
+                    <!--</a>-->
+                    <%= link_to post.title, post_view_path(:post_id => post.id), class: "lightview" %>
                   </h1>
                   <p>
-                  <% texts = get_post_media("text", post.id) %>
+                  <% texts = post.texts %>
                   <% texts.each do |text| %>
                       <% unless text.nil? %>
                         <%= text.content %>
@@ -111,6 +115,25 @@
     <!--/post like-->
 
     <!--post meta-->
+              <p class="post-meta">
+                <span class="post-date">
+                    <%= time_ago_in_words(post.created_at) + " ago" %>
+                  <!-- This method just consider the absolute difference
+                  no matter if it's negative. -->
+                </span>
+                •
+                <span class="post-author">
+                    <%# user = get_post_author(post.user_id) %>
+                    <%= post.user.name %>
+                </span>
+                •
+                <span class="post-tag">
+                    <% tags = post.tags %>
+                    <% tags.each do |tag| %>
+                        <%= tag.name + " " unless tag.nil? %>
+                    <% end %>
+                </span>
+              </p>
     <!--/post meta-->
 
             </div>

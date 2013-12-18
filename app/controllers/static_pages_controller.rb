@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  helper_method :default_post_panel, :next_post_panel, :get_post_media
+  helper_method :default_post_panel, :next_post_panel
 
   def index
   end
@@ -42,18 +42,9 @@ class StaticPagesController < ApplicationController
   #  Handle the search keyword to generate proper results.
   end
 
-  def get_post_media(media_type, post_id)
-    case media_type
-      when "text"
-        Text.where(post_id: post_id)
-      when "image"
-        Image.where(post_id: post_id)
-      when "audio"
-        Audio.where(post_id: post_id)
-      when "video"
-        Video.where(post_id: post_id)
-      else
-    #    do nothing.
+  def home_button
+    if request.original_url == root_path
+      render root_path
     end
   end
 

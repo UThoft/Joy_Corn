@@ -1,3 +1,13 @@
 <% @posts = default_post_panel %>
 <!--Adjust the display of those posts.-->
 
+<!--<div id="post-panel" class="js-masonry" data-masonry-options='{ "itemSelector": "#post-box"}'>-->
+<div id="post-panel">
+  <%= render 'shared/post' %>
+
+  <div class="page-nav">
+    <%# link_to('next page', static_pages_next_url, class: "next_post_panel") %>
+    <a href="/page/2">next page</a>
+  </div>
+</div>
+
