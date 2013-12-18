@@ -1,61 +1,52 @@
 
+
 <h4><a href="javascript:showMenu('topics')">TOPICS</a></h4>
 <ul class="sidebarUl" id="topics">
   <li class="sideButton">
-    <a href="#">TOPICS</a>
-  </li>
-  <li class="sideButton">
-    <a href="#">POSTING TIME</a>
-  </li>
-  <li class="sideButton">
-    <a href="#">TYPES</a>
-  </li>
-  <li class="sideButton">
-    <a href="#">POPULAR TAGS</a>
+    <%= link_to 'default', static_pages_search_path(:search_type => 'topic', :keyword => 'default') %>
   </li>
 </ul>
 
 <h4><a href="javascript:showMenu('types')">TYPES</a></h4>
 <ul class="sidebarUl" id="types">
   <li class="sideButton">
-    <a href="#">text</a>
+    <%= link_to 'text', static_pages_search_path(:search_type => 'type', :keyword => 'text') %>
   </li>
   <li class="sideButton">
-    <a href="#">image</a>
+    <%= link_to 'image', static_pages_search_path(:search_type => 'type', :keyword => 'image') %>
   </li>
   <li class="sideButton">
-    <a href="#">video</a>
+    <%= link_to 'audio', static_pages_search_path(:search_type => 'type', :keyword => 'audio') %>
   </li>
   <li class="sideButton">
-    <a href="#">audio</a>
+    <%= link_to 'video', static_pages_search_path(:search_type => 'type', :keyword => 'video') %>
   </li>
 </ul>
 
+
+
 <h4><a href="javascript:showMenu('popTags')">POPULAR TAGS</a></h4>
 <ul class="sidebarUl" id="popTags">
-  <li class="sideButton">
-    <a href="#">funny</a>
-  </li>
-  <li class="sideButton">
-    <a href="#">stupid</a>
-  </li>
-  <li class="sideButton">
-    <a href="#">miao</a>
-  </li>
-  <li class="sideButton">
-    <a href="#">dog</a>
-  </li>
+  <% tags = get_popular_tags %>
+  <% tags.each do |tag| %>
+      <li class="sideButton">
+        <%= link_to tag[0].to_s + ' (' + tag[1].to_s + ')', static_pages_search_path(:search_type => 'tag', :keyword => tag[0]) %>
+      </li>
+  <% end %>
 </ul>
 
 <h4><a href="javascript:showMenu('postTime')">POSTING TIME</a></h4>
 <ul class="sidebarUl" id="postTime">
   <li class="sideButton">
-    <a href="#">December 2013</a>
+    <%= link_to 'in one day', static_pages_search_path(:search_type => 'time', :keyword => 1.day.ago) %>
   </li>
   <li class="sideButton">
-    <a href="#">November 2013</a>
+    <%= link_to 'in two days', static_pages_search_path(:search_type => 'time', :keyword => 2.days.ago) %>
   </li>
   <li class="sideButton">
-    <a href="#">October 2013</a>
+    <%= link_to 'in one week', static_pages_search_path(:search_type => 'time', :keyword => 1.week.ago) %>
+  </li>
+  <li class="sideButton">
+    <%= link_to 'in one month', static_pages_search_path(:search_type => 'time', :keyword => 1.month.ago) %>
   </li>
 </ul>

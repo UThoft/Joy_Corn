@@ -1,9 +1,26 @@
+$(document).ready(function(){
+   document.getElementById(gon.global.current_menu).style.display = 'block';
+});
+
 function showMenu(id_menu){
     var my_menu = document.getElementById(id_menu);
+    closeOtherMenus(my_menu);
     if(my_menu.style.display=="none" || my_menu.style.display==""){
         my_menu.style.display="block";
     } else {
         my_menu.style.display="none";
+    }
+    gon.global.current_menu = my_menu;
+}
+
+function closeOtherMenus(my_menu) {
+    var $menuName = $('.sidebarUl');
+    for (i = 0; i < $menuName.length; i ++)
+    {
+        if ($menuName[i] != my_menu)
+        {
+            $menuName[i].style.display = "none";
+        }
     }
 }
 
