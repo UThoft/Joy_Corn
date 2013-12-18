@@ -5,37 +5,39 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  background: #000000;
+//  background: #000000;
   //  border: solid 2px red;
   //  overflow: hidden;
 }
 
-// left side
+/*-------viewer left side begin-----------*/
 #post-viewer-left{
   float: left;
-  background-color: #000000;
+//  background-color: #000000;
   height: 100%;
   width: 70%;
   display: table;
   margin: 0;
   padding: 0;
 }
-
+/*-----------viewer title------------*/
 #post-viewer-left #viewer-title{
   width: 100%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(65, 35, 35, 0.2);
   z-index: 10000;
   padding: 0;
   margin: 0px;
-  height: 10%;
+//  height: 10%;
   display: table-header-group;
 }
 
-#viewer-title h3{
+#viewer-title h2{
   float: left;
   width: 100%;
-  margin:0 8px;
-  color: #e4ebcc;
+  padding: 0;
+  margin: 0;
+  font-size: 36px;
+  color: #7b5134;
 }
 
 #viewer-title a{
@@ -45,19 +47,24 @@
   color: #fffffe;
 }
 
+/*-------------viewer content--------------*/
 #post-viewer-left #post-viewer-content {
   display: table-cell;
-
   max-height: 100%;
-
   max-width: 100%;
   padding-top: 10px;
   //padding-bottom: 10px;
-
 }
 
 #post-viewer-content .format-text {
-  background-color: #f4d99c;
+  background-image: url(Wood.jpg);
+  padding: 15px;
+}
+
+.viewer-text-format{
+  font-size: 28px;
+  color: #4e3624;
+  text-align: left;
 }
 
 #post-viewer-content .format-image img{
@@ -74,38 +81,136 @@
   max-width: 100%;
 }
 
+/*------------viewer left side end-----------*/
 
-
-// right side
+/*------------viewer right side begin-----------*/
 #post-viewer-right{
   float: right;
   background-color: #ffffff;
+  height: 98%;
+  width: 28%;
+  margin: 0;
+  padding: 1%;
+}
+
+/*--------------post author----------------*/
+#post-viewer-author{
+  width: 100%;
+  height: 60px;
+//  background: #f08080;
+  margin-bottom: 10px;
+}
+
+.post-author-pic{
+  float: left;
+  width: 60px;
+  height: 60px;
+}
+.post-author-info{
+  float:left;
+  width: 60%;
+  height: 80%;
+  margin-left: 10px;
+  padding: 5px 0;
+//  border: 1px solid firebrick;
+}
+
+.post-author-name{
+  font-size: 16px;
+  font-weight: bolder;
+  color: #916438;
+}
+
+.post-date{
+  font-size: 14px;
+}
+
+//#post-viewer-description{
+//  width: 100%;
+//  min-height: 80px;
+//  background: #ffa07a;
+//  margin-bottom: 20px;
+//}
+
+/*--------------post tags----------------*/
+#post-tags{
+  width: 100%;
+  min-height: 20px;
+  color: #916438;
+  font-size: 14px;
+  font-style: italic;
+//  background: #ffa07a;
+  margin-bottom: 10px;
+  padding: 10px;
+  clear: both;
+}
+
+/*---------------post comment---------------*/
+.viewer-comment-item{
+  width: 92%;
+  min-height: 40px;
+  background: #fdf2d4;
+  padding: 3%;
+  overflow: auto;
+  border-top: 1px solid #ffffff;
+}
+
+.user-comment-pic{
+  float: left;
+  width: 40px;
+  height: 40px;
+}
+.viewer-comment-content{
+  float: left;
   height: 100%;
-  width: 30%;
+  width: 80%;
+  margin-left: 8px;
+//  border: 1px solid royalblue;
+}
+
+.comment-author{
+  float: left;
+  font-size:14px;
+  font-weight: bolder;
+  color: #916438;
   margin: 0;
   padding: 0;
 }
 
-#post-viewer-author{
+.comment-text{
+  float: left;
+  font-size:14px;
   width: 100%;
-  height: 50px;
-  background: #f08080;
-  margin-bottom: 10px;
+  word-break: break-all;
+  margin: 0;
+  padding: 0;
+//  border: 1px solid greenyellow;
 }
 
-
-#post-viewer-description{
-  width: 100%;
-  min-height: 80px;
-  background: #ffa07a;
-  margin-bottom: 20px;
+.comment-post-date{
+  font-size: 12px;
+  font-style: italic;
+  color: #919191;
+  clear: both;
 }
 
-.viewer-comment-item{
-  width: 100%;
+.viewer-add-comment{
+  width: 92%;
   min-height: 40px;
-  margin-bottom: 5px;
-  background: #add8e6;
+  background: #fdf2d4;
+  padding: 3%;
+  overflow: auto;
 }
+
+#add-comment{
+  width: 170px;
+  height: 16px;
+  margin: 8px;
+  border-radius: 0px;
+  background-color: #ffffff;
+
+//  border: 1px solid #68442c;
+}
+/*----------  ---viewer right side end-----------*/
 
 

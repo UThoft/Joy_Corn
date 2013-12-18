@@ -102,10 +102,9 @@
 
   <div id="post-viewer-right">
     <div id="post-viewer-author">
-        <div class="post-author-picture">
-          <%= image_tag("admin.jpeg", class:"author-photo") %>
 
-        </div>
+          <%= image_tag("admin.jpeg", class:"post-author-pic") %>
+
         <div class="post-author-info">
           <div class="post-author-name">
                 <%# user = get_post_author(post.user_id) %>
@@ -127,10 +126,28 @@
     </div>
 
     <div class="viewer-comment-item">
+      <%= image_tag("user.jpg", class:"user-comment-pic") %>
+      <div class="viewer-comment-content">
+        <div class="comment-author">Illhamy</div>
+        <div class="comment-text">hahahahaha~hahahahaha~hahahahahahahahahahahahah</div>
+        <div class="comment-post-date">37 minutes ago</div>
+
+      </div>
     </div>
     <div class="viewer-comment-item">
+      <%= image_tag("user.jpg", class:"user-comment-pic") %>
+          <div class="viewer-comment-content">
+            <div class="comment-author">Zoe</div>
+            <div class="comment-text">hahahahahahahahahahah</div>
+            <div class="comment-post-date">17 minutes ago</div>
+
+          </div>
+
     </div>
-    <div class="viewer-comment-item">
+    <div class="viewer-add-comment">
+      <%= image_tag("user.jpg", class:"user-comment-pic") %>
+      <input type="text" id="add-comment" name="add-comment" placeholder="Add your comment!">
+
     </div>
   </div>
 </div>
