@@ -45,7 +45,7 @@
                   <% end %>
                   <!--<p class="post-image">-->
                     <!--<a href="http://themify.me/demo/themes/wumblr/files/2012/09/86529817.jpg" class="lightview">-->
-                      <%= image_tag(image_src) %>
+                      <%= image_tag(image_src)%>
                   <!--</p>-->
               <% end %>
         <% elsif post.media_type == "audio" %>
@@ -54,11 +54,8 @@
               <% audio = post.audios.first %>
               <% unless audio.nil? %>
                   <p class="audio-image">
-                    <a href="http://themify.me/demo/themes/wumblr/audio/just-a-mp3-song">
-
-                      <img src="http://themify.me/demo/themes/wumblr/wp-content/themes/wumblr/themify/img.php?src=http://themify.me/demo/themes/wumblr/files/2010/12/Katy-Perry-c07-722638.jpg&amp;w=100&amp;h=100&amp;zc=1"
+                      <img src="http://themify.me/demo/themes/wumblr/wp-content/themes/wumblr/themify/img.php?src=http://themify.me/demo/themes/wumblr/files/2010/12/Katy-Perry-c07-722638.jpg"
                            alt="Just a MP3 Song">
-                    </a>
                   </p>
 
                   <div class="audio-player">

@@ -45,16 +45,22 @@
   display: table-cell;
   max-height: 90%;
   max-width: 90%;
+  padding: 10px;
 
 }
 
-#post-viewer-media.format-text {
+#post-viewer-content .format-text {
   background-color: #f4d99c;
 }
 
-#post-viewer-media.post-view .post-image {
-  height: auto;
-  width: auto;
+#post-viewer-content .format-image img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#post-viewer-content .format-audio audio {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 

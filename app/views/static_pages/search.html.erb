@@ -1,6 +1,7 @@
-<% @posts = next_post_panel %>
+<% @posts = search_post_panel %>
+<!--Adjust the display of those posts.-->
 
-
+<!--<div id="post-panel" class="js-masonry" data-masonry-options='{ "itemSelector": "#post-box"}'>-->
 <div id="post-panel">
   <%= render 'shared/post' %>
 
@@ -9,3 +10,4 @@
     <a href="/page/2">next page</a>
   </div>
 </div>
+
