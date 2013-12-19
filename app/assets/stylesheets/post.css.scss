@@ -49,24 +49,24 @@ POST
 #post-box {
 //  border: solid 2px #000000;
   float: left;
-  width: auto;
+  width: 30.5%;
   display: block;
 }
 
 .post-inner {
-//  border-radius: 10px;
 //  position: relative;
   float: left;
-  width: 240px;
+  width: 85%;
   border-radius: 6px;
   padding: 20px 20px;
-  position: relative;
+//  position: relative;
 //  border: solid 2px blue;
 }
 
 /* post content */
 .post-content {
   min-width: 140px;
+//  width: auto;
   max-height: 300px;
   overflow: hidden;
 }
