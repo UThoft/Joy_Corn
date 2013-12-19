@@ -87,3 +87,55 @@ window.onload=function(){
     while (b<=menucount);
     if (autochangemenu!=0){start_autochange();}
 };
+
+
+
+//侧栏跟随
+
+//(function(){
+//    var oDiv=document.getElementById("sidebar-wrap");
+//    var H=0,iE6;
+//    var Y=oDiv;
+//    while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+//    iE6=window.ActiveXObject&&!window.XMLHttpRequest;
+//    if(!iE6){
+//        window.onscroll=function()
+//        {
+//            var s=document.body.scrollTop||document.documentElement.scrollTop;
+//            if(s>H){oDiv.className="div1 div2";if(iE6){oDiv.style.top=(s-H)+"px";}}
+//            else{oDiv.className="div1";}
+//        };
+//    }
+//
+//})();
+
+//var documentHeight = 0;
+//var topPadding = 15;
+//$(function() {
+//    var offset = $("#sidebar-wrap").offset();
+//    documentHeight = $(document).height();
+//    $(window).scroll(function() {
+//        var sideBarHeight = $("#sidebar-wrap").height();
+//        if ($(window).scrollTop() > offset.top) {
+//            var newPosition = ($(window).scrollTop() – offset.top) + topPadding;
+//            var maxPosition = documentHeight – (sideBarHeight + 368);
+//            if (newPosition > maxPosition) {
+//                newPosition = maxPosition;
+//            }
+//            $("#sidebar-wrap").stop().animate({
+//                marginTop: newPosition
+//            });
+//        } else {
+//            $("#sidebar-wrap").stop().animate({
+//                marginTop: 0
+//            });
+//        };
+//    });
+//});
+
+
+$('#sidebar-wrap').fixbox({});
+$("#sidebar-wrap").fixbox({distanceToBottom:10,isFixdeHeight:false,isFixdeDocHeight:false,threshold:2});
+$(document).ready(function(){
+    console.log($(document).height());
+});

@@ -4,9 +4,10 @@
 
 .nav {
   width: 100px;
-  height: 32px ;
+  height: 36px ;
   float: left;
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: bolder;
   text-align: center;
   margin: 5px 10px;
 }
@@ -15,7 +16,7 @@
   display: block;
   text-decoration: none;
   color: #e4ebcc;;
-  padding: 9px;
+  padding: 8px;
   text-shadow:0 1px 1px rgba(55, 51, 58, 0.5);
 }
 
