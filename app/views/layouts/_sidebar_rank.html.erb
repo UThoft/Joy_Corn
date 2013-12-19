@@ -1,19 +1,38 @@
 
 <ul class="sidebarRk" id="hottest">
   <h4>Hottest</h4>
-<li class="hotTime">
-  <a href="#" onmouseover="easytabs('1', '1');" onfocus="easytabs('1', '1');" onclick="return false;"  title="" id="tablink1">Today</a>
-</li>
-<li class="hotTime">
-  <a href="#" onmouseover="easytabs('1', '2');" onfocus="easytabs('1', '2');" onclick="return false;"  title="" id="tablink2">This Week</a>
-</li>
-<li class="hotTime">
-  <a href="#" onmouseover="easytabs('1', '3');" onfocus="easytabs('1', '3');" onclick="return false;"  title="" id="tablink3">This Month</a>
-</li>
+    <li class="hotTime">
+      <a href="#" onmouseover="easytabs('1', '1');" onfocus="easytabs('1', '1');" onclick="return false;"  title="" id="tablink1">Today</a>
+    </li>
+    <li class="hotTime">
+      <a href="#" onmouseover="easytabs('1', '2');" onfocus="easytabs('1', '2');" onclick="return false;"  title="" id="tablink2">This Week</a>
+    </li>
+    <li class="hotTime">
+      <a href="#" onmouseover="easytabs('1', '3');" onfocus="easytabs('1', '3');" onclick="return false;"  title="" id="tablink3">This Month</a>
+    </li>
 </ul>
 
-<div id="tabcontent1">Tabcontent 1</div>
+<div id="tabcontent1">
+  <% likes_1 = get_hottest('post', 1.day.ago) %>
+  <% likes_1.each do |like_1| %>
+      <%= like_1.post.title unless like_1.nil? %>
+      <br>
+  <% end %>
+</div>
 
-<div id="tabcontent2">Tabcontent 2</div>
+<div id="tabcontent2">
+  <% likes_2 = get_hottest('post', 1.week.ago) %>
+  <% likes_2.each do |like_2| %>
+      <%= like_2.post.title unless like_2.nil? %>
+      <br>
+<% end %>
+</div>
 
-<div id="tabcontent3">Tabcontent 3</div>
+<div id="tabcontent3">
+  <% likes_3 = get_hottest('post', 1.month.ago) %>
+  <% likes_3.each do |like_3| %>
+      <%= like_3.post.title unless like_3.nil? %>
+      <br>
+<% end %>
+</div>
+

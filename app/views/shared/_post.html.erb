@@ -107,7 +107,7 @@
 
     <!--post comment-->
                 <div class="post-comment">
-                  <%= link_to post.id, post_view_path(:post_id => post.id), class: "lightview comment-link" %>
+                  <%= link_to post.likes.size, post_view_path(:post_id => post.id), class: "lightview comment-link" %>
                 </div>
     <!--/post comment-->
 

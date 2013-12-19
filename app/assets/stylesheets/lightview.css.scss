@@ -702,3 +702,10 @@
 .lv_controls_top_skin_mac .lv_icon_disabled,
 .lv_controls_top_skin_mac .lv_icon_disabled:hover { color: #575757; }
 
+.lv_window .lv_skin canvas {
+//  background-color: #000000;
+//  opacity: 0 !important;
+  display: none !important;
+//  padding: 50px !important;
+//  z-index: 1 !important;
+}

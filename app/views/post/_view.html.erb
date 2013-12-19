@@ -105,7 +105,8 @@
         <div class="post-author-info">
           <div class="post-author-name">
                 <%# user = get_post_author(post.user_id) %>
-              <%= post.user.name %>
+              <%# post.user.name %>
+            <%= link_to post.user.name %>
           </div>
           <div class="post-date">
             <%= time_ago_in_words(post.created_at) + " ago" %>
@@ -117,9 +118,9 @@
     <div id="post-tags">
       <% tags = post.tags %>
       <% tags.each do |tag| %>
-          <%= tag.name + " " unless tag.nil? %>
-      <% end %>
-      funny
+          <%# tag.name + " " unless tag.nil? %>
+          <%= link_to tag.name, static_pages_search_path(:search_type => 'tag', :keyword => tag.name) %>
+    <% end %>
     </div>
 
     <div class="viewer-comment-item">
