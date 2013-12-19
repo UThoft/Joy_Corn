@@ -8,7 +8,8 @@ $(document).ready(function(){
 //            isAnimated: true
             isAnimated: !Modernizr.csstransitions,
 //            isRTL: true
-            columnWidth: 10
+//            columnWidth: 30%
+//            gutterWidth: 17
         });
     });
 

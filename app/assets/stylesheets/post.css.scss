@@ -1,16 +1,17 @@
 .post {
   background: #fff;
   margin-bottom: 20px;
-  margin-right: 20px;
-  margin-left: 20px;
+//  margin-right: 10px;
+  margin-left: 21px;
 //  margin-top: 20px;
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
-//  position: relative;
-  width: 200px;
+  position: relative;
+  width: auto;
   font-size: 90%;
-  float: left;
+//  float: left;
   display: block;
+//  border: solid 2px #000000;
 //  display:inline-block;
 //  margin-left: 30px;
 //  margin-bottom: 30px;
@@ -46,20 +47,23 @@ POST
 *************************************************************************************/
 #post-box {
 //  border: solid 2px #000000;
-//  float: left;
+  float: left;
+  width: auto;
   display: block;
 }
 
 .post-inner {
   border-radius: 10px;
   padding: 15px 20px 5px;
-  position: relative;
+//  position: relative;
+  float: left;
+  width: 240px;
 //  border: solid 2px blue;
 }
 
 /* post content */
 .post-content {
-  min-width: 120px;
+  min-width: 140px;
   max-height: 300px;
   overflow: hidden;
 }

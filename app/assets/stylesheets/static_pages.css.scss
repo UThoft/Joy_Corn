@@ -14,46 +14,45 @@ html, body {
 
 #pagewrap {
   position: relative;
-  width: 1200px;
+  width: 80%;
 //  min-height: 1500px;
-  min-height: 100%;
+//  min-height: 100%;
 //  height: auto !important;
-  height: 100%;
+//  height: 100%;
 //  margin: 0 auto -4em;
 //  top: 0px;
 //  bottom: 0px;
   margin: 0;
   padding: 0;
-  left: 5%;
-  right: 5%;
+  left: 10%;
+  right: 10%;
 //  border: solid 2px;
 }
 
 
 #header {
   background: url("header_bg.png") repeat;
-  position: absolute;
+  position: relative;
   height: 180px;
-  width: 1200px;
+  width: 100%;
+  margin-top: 1%;
 //  border: solid 2px yellow;
 }
 
 #main-panel {
-  position: absolute;
-  top: 200px;
+//  position: ;
+  float: left;
+  top: 180px;
   left: 0;
   width: 100%;
-  min-height: 100%;
-//  border: solid 2px yellow;
-
+//  min-height: 100%;
+  margin-top: 2%;
+//  border: solid 2px #ff912f;
+//  float: left;
+//  clear: both;
 }
 
-#main-panel #sidebar-wrap{
-  position: fixed;
-  left: 70px;
-  top: 210px;
-  width: 250px;
-}
+
 
 .sidebar-classification{
   background-color: #FFFFFE ;
@@ -70,11 +69,28 @@ html, body {
   margin: 0 10px 30px 0;
 }
 
+#main-panel #sidebar-wrap{
+//  position: absolute;
+  float: left;
+  left: 1%;
+  top: 1%;
+  width: 20%;
+//  border: solid 2px green;
+}
+
 #container  {
-  position: absolute;
-  left: 245px;
-  min-height: 100%;
-  height: auto;
+//  position: absolute;
+//  right: 1%;
+//  margin-left: 1%;
+  top: 1%;
+  float: left;
+//  left: 245px;
+//  min-height: 100%;
+//  max-width: 100%;
+//  height: auto;
+
+  width: 79%;
+//  right: 0;
 //  border: solid 2px red;
 }
 
@@ -84,9 +100,10 @@ html, body {
 //  column-count: 4;
 //  height: 1000px;
 //  border: solid 2px #000000;
-  clear: both;
-  width: 940px;
-  position: absolute;
+//  clear: both;
+  width: 100%;
+//  position: absolute;
+  float: left;
 //  -webkit-column-width:250px;
 //  -moz-column-width:250px;
 //  -o-colum-width:250px;
@@ -108,13 +125,19 @@ html, body {
 
 
 #footer {
-  clear: both;
-  position: absolute;
-  bottom: -20px;
+//  clear: both;
+//  position: absolute;
+  float: left;
 //  padding-top: 30px;
 //  left: 20px;
 //  float: left;
-  width: 940px;
+//  bottom: 0;
+  left: 0;
+  right: 0;
+  min-width: 80%;
+  max-width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
 
   //margin-top: 200px;
 //  border: solid 2px #000000;
