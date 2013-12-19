@@ -15,13 +15,6 @@ html, body {
 #pagewrap {
   position: relative;
   width: 80%;
-//  min-height: 1500px;
-//  min-height: 100%;
-//  height: auto !important;
-//  height: 100%;
-//  margin: 0 auto -4em;
-//  top: 0px;
-//  bottom: 0px;
   margin: 0;
   padding: 0;
   left: 10%;
@@ -36,6 +29,7 @@ html, body {
   height: 180px;
   width: 100%;
   margin-top: 1%;
+//  margin-bottom: 10px;
 //  border: solid 2px yellow;
 }
 
@@ -52,11 +46,15 @@ html, body {
 //  clear: both;
 }
 
-#sidebar-wrap{
-//  position: fixed;
-//  left: 70px;
-//  top: 210px;
-  width: 220px;
+#sidebar-wrap.sticky {
+  float: none;
+  position: fixed;
+//  top: 20px !important;
+  margin: 0;
+  z-index: 6;
+  left: 10% !important;
+  width: 16% !important;
+  //  width: 20%;
 }
 
 .sidebar-classification{
@@ -78,7 +76,7 @@ html, body {
 //  position: absolute;
   float: left;
   left: 1%;
-  top: 1%;
+//  top: 1%;
   width: 20%;
 //  border: solid 2px green;
 }
@@ -88,7 +86,7 @@ html, body {
 //  right: 1%;
 //  margin-left: 1%;
   top: 1%;
-  float: left;
+  float: right;
 //  left: 245px;
 //  min-height: 100%;
 //  max-width: 100%;

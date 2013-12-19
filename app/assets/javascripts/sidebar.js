@@ -9,6 +9,15 @@ $(document).ready(function(){
     {
         menu.style.display = "block";
     }
+
+    $('#sidebar-wrap').stickySidebar({
+        headerSelector: '#header',
+        navSelector: '#',
+        contentSelector: '#container',
+        footerSelector: '#footer',
+        sidebarTopMargin: 33,
+        footerThreshold: 40
+    });
 });
 
 function showMenu(id_menu){
@@ -134,8 +143,8 @@ window.onload=function(){
 //});
 
 
-$('#sidebar-wrap').fixbox({});
-$("#sidebar-wrap").fixbox({distanceToBottom:10,isFixdeHeight:false,isFixdeDocHeight:false,threshold:2});
-$(document).ready(function(){
-    console.log($(document).height());
-});
+//$('#sidebar-wrap').fixbox({});
+//$("#sidebar-wrap").fixbox({distanceToBottom:10,isFixdeHeight:false,isFixdeDocHeight:false,threshold:2});
+//$(document).ready(function(){
+//    console.log($(document).height());
+//});
