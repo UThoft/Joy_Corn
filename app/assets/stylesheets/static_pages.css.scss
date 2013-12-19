@@ -40,10 +40,9 @@ html, body {
 }
 
 #main-panel {
-<<<<<<< Updated upstream
 //  position: ;
   float: left;
-  top: 180px;
+  top: 220px;
   left: 0;
   width: 100%;
 //  min-height: 100%;
@@ -53,39 +52,12 @@ html, body {
 //  clear: both;
 }
 
-
-=======
-  position: absolute;
-  top: 220px;
-  left: 0;
-  width: 100%;
-  min-height: 100%;
-//  border: solid 1px yellow;
-}
-
-//#floatbox{
-//  float: left;
-//  position: relative;
-//  width: 240px;
-//}
-
 #sidebar-wrap{
 //  position: fixed;
 //  left: 70px;
 //  top: 210px;
   width: 220px;
 }
->>>>>>> Stashed changes
-
-//.div1{
-//  width: 240px;
-//}
-//.div2{
-//  position: fixed;
-//  _position:absolute;
-//  top:0;
-//  z-index:250;
-//}
 
 .sidebar-classification{
   background-color: #FFFFFE ;
@@ -112,7 +84,6 @@ html, body {
 }
 
 #container  {
-<<<<<<< Updated upstream
 //  position: absolute;
 //  right: 1%;
 //  margin-left: 1%;
@@ -124,15 +95,7 @@ html, body {
 //  height: auto;
 
   width: 79%;
-//  right: 0;
-//  border: solid 2px red;
-=======
-  position: absolute;
-  left: 245px;
-  min-height: 100%;
   height: auto;
-  border: solid 2px red;
->>>>>>> Stashed changes
 }
 
 #post-panel {
@@ -142,22 +105,9 @@ html, body {
 //  height: 1000px;
 //  border: solid 2px #000000;
 //  clear: both;
-<<<<<<< Updated upstream
   width: 100%;
 //  position: absolute;
   float: left;
-=======
-  width: 950px;
-  position: absolute;
->>>>>>> Stashed changes
-//  -webkit-column-width:250px;
-//  -moz-column-width:250px;
-//  -o-colum-width:250px;
-//  -webkit-column-gap:10px;
-//  -moz-column-gap:10px;
-//  -o-column-gap:10px;
-//  width:940px;
-  border: 1px solid #000000;
 }
 
 .page-nav {
