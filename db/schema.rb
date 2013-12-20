@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131213021805) do
+ActiveRecord::Schema.define(version: 20131219041653) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "audios", force: true do |t|
     t.integer "post_id"
@@ -23,22 +26,24 @@ ActiveRecord::Schema.define(version: 20131213021805) do
     t.string  "link",    null: false
   end
 
-  create_table "posts", force: true do |t|
-    t.string   "type",       null: false
-    t.boolean  "like",       null: false
+  create_table "likes", force: true do |t|
     t.integer  "user_id"
+    t.integer  "post_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string    "media_type",                          null: false
+    t.integer   "user_id"
+    t.timestamp "created_at",            precision: 6
+    t.timestamp "updated_at",            precision: 6
+    t.string    "title",      limit: 32
   end
 
   create_table "posts_tags", id: false, force: true do |t|
     t.integer "post_id", null: false
     t.integer "tag_id",  null: false
-  end
-
-  create_table "posts_users", id: false, force: true do |t|
-    t.integer "user_id", null: false
-    t.integer "post_id", null: false
   end
 
   create_table "tags", force: true do |t|
@@ -47,15 +52,15 @@ ActiveRecord::Schema.define(version: 20131213021805) do
 
   create_table "texts", force: true do |t|
     t.integer "post_id"
-    t.string  "content", limit: 250, null: false
+    t.string  "content", limit: 1024, null: false
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",      null: false
-    t.string   "name",       null: false
-    t.string   "password",   null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "email",                    null: false
+    t.string    "name",                     null: false
+    t.string    "password",                 null: false
+    t.timestamp "created_at", precision: 6
+    t.timestamp "updated_at", precision: 6
   end
 
   create_table "videos", force: true do |t|

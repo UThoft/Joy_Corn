@@ -34,24 +34,24 @@ class CreatePosts < ActiveRecord::Migration
 
     end
 
-    # One Text/Image/Audio/Video belongs to one post.
+    # One Text/Image/Audio/Video belongs to one posts.
     create_table :texts do |t|
-      t.belongs_to :post, foreign_key: "post_id"
+      t.belongs_to :posts, foreign_key: "post_id"
       t.string :content, limit: 250, null: false
     end
 
     create_table :images do |t|
-      t.belongs_to :post, foreigh_key: "post_id"
+      t.belongs_to :posts, foreigh_key: "post_id"
       t.string :link, null: false
     end
 
     create_table :audios do |t|
-      t.belongs_to :post, foreigh_key: "post_id"
+      t.belongs_to :posts, foreigh_key: "post_id"
       t.string :link, null: false
     end
 
     create_table :videos do |t|
-      t.belongs_to :post
+      t.belongs_to :posts
       t.string :link, null: false
     end
   end
