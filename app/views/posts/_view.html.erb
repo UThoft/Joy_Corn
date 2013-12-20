@@ -20,7 +20,7 @@
       </h2>
     </div>
 
-    <!-- post media -->
+    <!-- posts media -->
     <!-- if the media is small then keep it, if too
     large then fit the window (max size should be set) -->
     <div id = "post-viewer-content" class="h-align v-align">
@@ -46,7 +46,7 @@
                   <% else %>
                       <% image_src = image_path(image.link) %>
                   <% end %>
-                  <!--<p class="post-image">-->
+                  <!--<p class="posts-image">-->
                     <!--<a href="http://themify.me/demo/themes/wumblr/files/2012/09/86529817.jpg" class="lightview">-->
                       <%= image_tag(image_src)%>
                   <!--</p>-->
@@ -84,7 +84,7 @@
 
     </div>
 
-    <!-- assume that the post can just have one non-text media -->
+    <!-- assume that the posts can just have one non-text media -->
 
 
         </div>
@@ -94,18 +94,17 @@
   </div>
 
 
-    <!-- post comment -->
+    <!-- posts comment -->
 
 
   <div id="post-viewer-right">
     <div id="post-viewer-author">
-
           <%= image_tag("admin.jpeg", class:"post-author-pic") %>
 
         <div class="post-author-info">
           <div class="post-author-name">
-                <%# user = get_post_author(post.user_id) %>
-              <%# post.user.name %>
+                <%# user = get_post_author(posts.user_id) %>
+              <%# posts.user.name %>
             <%= link_to post.user.name %>
           </div>
           <div class="post-date">

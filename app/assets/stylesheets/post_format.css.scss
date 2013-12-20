@@ -4,7 +4,7 @@ POST Format
 
 
 
-/* standard post */
+/* standard posts */
 
 .post.format-standard .post-inner {
   background: url("note-bg.png") -118px 14px;
@@ -20,7 +20,7 @@ POST Format
   top: 15px;
 }
 
-/* post image */
+/* posts image */
 .post-image {
   max-width: 100%;
 }
@@ -34,7 +34,7 @@ POST Format
 }
 
 ///* lightbox zoom image */
-//.post-image .lightbox {
+//.posts-image .lightbox {
 //  position: relative;
 //  display: inline-block;
 //  zoom: 1;
@@ -42,7 +42,7 @@ POST Format
 //  max-width: 100%;
 //}
 //
-//.post-image .lightbox .zoom {
+//.posts-image .lightbox .zoom {
 //  width: 40px;
 //  height: 40px;
 //  background: url("icon-zoom.png") no-repeat center center;
@@ -53,11 +53,11 @@ POST Format
 //  border-radius: 10em;
 //}
 //
-//.post-image .lightbox:hover .zoom {
+//.posts-image .lightbox:hover .zoom {
 //  background-color: #000;
 //}
 
-/* quote post */
+/* quote posts */
 .post.format-quote .post-inner {
   background: url("note-bg.png") -118px 17px;
   padding-left: 75px;
@@ -85,7 +85,7 @@ POST Format
   text-align: right;
 }
 
-/* link post */
+/* link posts */
 .post.format-link .post-inner {
   padding-left: 60px;
 }
@@ -99,7 +99,7 @@ POST Format
   top: 15px;
 }
 
-/* audio post */
+/* audio posts */
 .post.format-audio .audio-image img {
   float: left;
   margin: 0 20px 15px 0;
@@ -124,7 +124,7 @@ POST Format
   width: 100%;
 }
 
-/* gallery post */
+/* gallery posts */
 .post.format-gallery .post-inner {
   padding: 17px 0 0;
 }
@@ -159,7 +159,7 @@ POST Format
   padding-right: 20px;
 }
 
-/* status post */
+/* status posts */
 .post.format-status .status-author-avatar img {
   float: left;
   margin: 0 14px 15px 0;

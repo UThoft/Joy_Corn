@@ -1,11 +1,15 @@
 JoyCorn::Application.routes.draw do
-  get "post/view"
+  resources :posts do
+    collection do
+      get 'view'
+    end
+  end
   match 'page/:id' => 'static_pages#next', via:[:GET]
   get "static_pages/index"
   get "static_pages/help"
   get "static_pages/next"
   get "static_pages/search"
-
+  #match 'posts/new' => 'posts#new', via:[:GET]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -26,7 +30,7 @@ JoyCorn::Application.routes.draw do
   #   resources :products do
   #     member do
   #       get 'short'
-  #       post 'toggle'
+  #       posts 'toggle'
   #     end
   #
   #     collection do
@@ -50,7 +54,7 @@ JoyCorn::Application.routes.draw do
   
   # Example resource route with concerns:
   #   concern :toggleable do
-  #     post 'toggle'
+  #     posts 'toggle'
   #   end
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable

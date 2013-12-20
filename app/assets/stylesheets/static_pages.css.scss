@@ -19,6 +19,7 @@ html, body {
   padding: 0;
   left: 10%;
   right: 10%;
+//  min-height: 100%;
 //  border: solid 2px;
 }
 
@@ -104,6 +105,7 @@ html, body {
 //  border: solid 2px #000000;
 //  clear: both;
   width: 100%;
+//  min-height: 80%;
 //  position: absolute;
   float: left;
 }
@@ -126,15 +128,18 @@ html, body {
 //  padding-top: 30px;
 //  left: 20px;
 //  float: left;
+//  top: 0;
 //  bottom: 0;
   left: 0;
   right: 0;
+//  bottom: 0;
   min-width: 80%;
   max-width: 100%;
+//  min-height: 100%;
   padding-left: 10%;
   padding-right: 10%;
 
-  //margin-top: 200px;
+//  margin-top: 2000px;
 //  border: solid 2px #000000;
 //  padding-top: 50px;
 }
