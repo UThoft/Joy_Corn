@@ -9,10 +9,7 @@
 
 # Ignore IDEA project files.
 .idea/
-config/database.yml
 
-# Ignore database.yml file
-/config/database.yml
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
