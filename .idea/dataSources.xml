@@ -11,21 +11,21 @@
     <data-source source="LOCAL" name="Rails Joy_Corn: test" uuid="fb9a7bda-c721-4245-ab13-c9f319d0fa78">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1/owenwj</jdbc-url>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/JoyCorn</jdbc-url>
       <user-name>owenwj</user-name>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails Joy_Corn: cucumber" uuid="7ba83f3d-a272-4144-a1ee-1dd740414479">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1/owenwj</jdbc-url>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/JoyCorn</jdbc-url>
       <user-name>owenwj</user-name>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails Joy_Corn: production" uuid="b7ac15b5-f2d4-4ce2-91cc-1b19654af819">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1/owenwj</jdbc-url>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/JoyCorn</jdbc-url>
       <user-name>owenwj</user-name>
       <libraries />
     </data-source>
