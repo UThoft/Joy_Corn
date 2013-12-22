@@ -17,12 +17,12 @@ ActiveRecord::Schema.define(version: 20131219041653) do
   enable_extension "plpgsql"
 
   create_table "audios", force: true do |t|
-    t.integer "post_id"
+    t.integer "post_id", null: false
     t.string  "link",    null: false
   end
 
   create_table "images", force: true do |t|
-    t.integer "post_id"
+    t.integer "post_id", null: false
     t.string  "link",    null: false
   end
 
@@ -35,10 +35,10 @@ ActiveRecord::Schema.define(version: 20131219041653) do
 
   create_table "posts", force: true do |t|
     t.string    "media_type",                          null: false
-    t.integer   "user_id"
+    t.integer   "user_id",                             null: false
     t.timestamp "created_at",            precision: 6
     t.timestamp "updated_at",            precision: 6
-    t.string    "title",      limit: 32
+    t.string    "title",      limit: 64
   end
 
   create_table "posts_tags", id: false, force: true do |t|
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 20131219041653) do
   end
 
   create_table "videos", force: true do |t|
-    t.integer "post_id"
+    t.integer "post_id", null: false
     t.string  "link",    null: false
   end
 
