@@ -75,7 +75,9 @@ POST
 .post-title {
   margin: 0 0 5px;
   padding: 0;
-  font: bold 140%/120% "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  font-family: 'autour';
+//  font: bold 140%/120% "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  font: bold 140%/120% "autour", "Lucida Sans Unicode", sans-serif;
   text-shadow: 0 1px 0 rgba(255, 255, 255, .6);
 }
 
@@ -86,7 +88,8 @@ POST
 
 /* post meta */
 .post-meta {
-  font: italic 12px/130% "Times New Roman", Times, serif;
+//  font: italic 12px/130% "Times New Roman", Times, serif;
+  font: italic 10px/130% "autour", Times, serif;
   text-align: right;
   clear: both;
   margin: 20px 0 10px;
@@ -94,7 +97,6 @@ POST
 
 .post-tag {
   float: left;
-
   border-radius: 3px;
   padding: 2px;
   margin-right: 2px;
