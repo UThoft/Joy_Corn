@@ -7,12 +7,12 @@ POST Format
 /* standard posts */
 
 .post.format-standard .post-inner {
-  background: asset_data_url("note-bg.png") -118px 14px;
+  background: asset_url("note-bg.png") -118px 14px;
   padding-left: 75px;
 }
 
 .post.format-standard .post-icon {
-  background: asset_data_url("pencil-icon.png") no-repeat;
+  background: asset_url("pencil-icon.png") no-repeat;
   width: 30px;
   height: 30px;
   position: absolute;
@@ -59,7 +59,7 @@ POST Format
 
 /* quote posts */
 .post.format-quote .post-inner {
-  background: asset_data_url("note-bg.png") -118px 17px;
+  background: asset_url("note-bg.png") -118px 17px;
   padding-left: 75px;
   padding-right: 30px;
 }
@@ -69,7 +69,7 @@ POST Format
 }
 
 .post.format-quote .post-icon {
-  background: asset_data_url("quote-icon-small.png") no-repeat;
+  background: asset_url("quote-icon-small.png") no-repeat;
   width: 30px;
   height: 30px;
   position: absolute;
@@ -91,7 +91,7 @@ POST Format
 }
 
 .post.format-link .post-icon {
-  background: asset_data_url("link-icon-small.png") no-repeat;
+  background: asset_url("link-icon-small.png") no-repeat;
   width: 27px;
   height: 27px;
   position: absolute;
@@ -130,7 +130,7 @@ POST Format
 }
 
 .post.format-gallery .post-icon {
-  background: asset_data_url("clip-icon.png") no-repeat;
+  background: asset_url("clip-icon.png") no-repeat;
   width: 30px;
   height: 61px;
   position: absolute;
@@ -144,7 +144,7 @@ POST Format
 
 .post.format-gallery .post-title {
   padding: 8px 20px 8px 45px;
-  background: #ce413c asset_data_url("gallery-title-bg.jpg");
+  background: #ce413c asset_url("gallery-title-bg.jpg");
   box-shadow: 0 1px 0 rgba(0, 0, 0, .2);
   margin-left: -20px;
   margin-right: -21px;
