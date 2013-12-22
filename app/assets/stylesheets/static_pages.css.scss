@@ -1,5 +1,5 @@
 // Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
+// They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 * {
   margin: 0;
@@ -25,7 +25,7 @@ html, body {
 
 
 #header {
-  background: image_url("/assets/header_bg.png") repeat;
+  background: asset_url("header_bg.png") repeat;
   position: relative;
   height: 180px;
   width: 100%;
