@@ -55,7 +55,7 @@ MASONRY
 
 /* masonry-col3 text posts */
 .grid3 .format-standard .post-inner {
-  background: url("note-bg.png") -160px 14px;
+  background: asset_data_url("note-bg.png") -160px 14px;
   padding-left: 30px;
 }
 
@@ -94,12 +94,12 @@ MASONRY
 
 /* masonry-col3 quote posts */
 .grid3 .format-quote .post-inner {
-  background: url("note-bg.png") -190px 16px;
+  background: asset_data_url("note-bg.png") -190px 16px;
   padding-left: 43px;
 }
 
 .grid3 .format-quote .post-icon {
-  background: url("quote-icon-small.png") no-repeat;
+  background: asset_data_url("quote-icon-small.png") no-repeat;
   width: 20px;
   height: 15px;
   left: 15px;
@@ -112,7 +112,7 @@ MASONRY
 }
 
 .grid3 .format-link .post-icon {
-  background: url("link-icon-small.png") no-repeat;
+  background: asset_data_url("link-icon-small.png") no-repeat;
   width: 20px;
   height: 20px;
   position: absolute;

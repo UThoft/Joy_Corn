@@ -79,14 +79,14 @@
   margin: 0;
   overflow: hidden;
   zoom: 1;
-  background: url('skins/blank.gif');
+  background: asset_data_url('skins/blank.gif');
 }
 .lv_inner_previous_next_overlays * { padding: 0; margin: 0; }
 .lv_inner_previous_next_overlays .lv_button {
   position: relative;
   height: 100%;
   width: 49%;
-  background: url('skins/blank.gif');
+  background: asset_data_url('skins/blank.gif');
   zoom: 1;
   cursor: pointer;
 }
@@ -146,7 +146,7 @@
   margin: 0;
   overflow: auto; /* scrollbars */
   text-align: left;
-  background: url('skins/blank.gif'); /* Chrome 18+ opacity bug */
+  background: asset_data_url('skins/blank.gif'); /* Chrome 18+ opacity bug */
 }
 
 .lv_measure_element {
@@ -171,7 +171,7 @@
 
 .lv_blank_background, /* IE  */
 .lv_content /* Chrome 18+ */
- { background-image: url('skins/blank.gif'); }
+ { background-image: asset_data_url('skins/blank.gif'); }
 
 /* The buttons on the side when you view a gallery */
 .lv_side_buttons_underneath {
@@ -211,7 +211,7 @@
 }
 .lv_side_button_previous {
   margin-left: 0px;
-  background-image: url("skins/light/sprite.png");
+  background-image: asset_data_url("skins/light/sprite.png");
   background-repeat: no-repeat;
   background-position: 0px -33px;
 }
@@ -219,7 +219,7 @@
 .lv_side_left .lv_side_button_out { background-position: 0px -64px; }
 .lv_side_button_next {
   margin-left: 0px;
-  background-image: url("skins/light/sprite.png");
+  background-image: asset_data_url("skins/light/sprite.png");
   background-repeat: no-repeat;
   background-position: -41px -33px;
 }
@@ -236,7 +236,7 @@
   height: 33px;
   position: absolute;
   cursor: pointer;
-  background-image: url("skins/light/sprite.png");
+  background-image: asset_data_url("skins/light/sprite.png");
   background-repeat: no-repeat;
   background-position: 0px 0px;
   /* the spacing option set on the relative controls is taken into account when positioning */
@@ -280,7 +280,7 @@
   position: relative;
 }
 .lv_controls_top .lv_icon {
-  background-image: url("skins/light/sprite.png");
+  background-image: asset_data_url("skins/light/sprite.png");
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
@@ -338,7 +338,7 @@
   width: 33px;
   float: left;
   position: relative;
-  background-image: url("skins/light/sprite.png");
+  background-image: asset_data_url("skins/light/sprite.png");
   background-repeat: no-repeat;
   background-position: -166px -21px;
   cursor: pointer;
@@ -358,7 +358,7 @@
   margin-left: -150px;
   height: 50px;
   overflow: hidden;
-  background: url('skins/blank.gif');
+  background: asset_data_url('skins/blank.gif');
 }
 .lv_slider {
   font-family: "Lucida Sans", "Lucida Grande", Tahoma, sans-serif;
@@ -402,7 +402,7 @@
   text-decoration: none;
   border: none;
   background-repeat: no-repeat;
-  background: url('skins/light/sprite.png');
+  background: asset_data_url('skins/light/sprite.png');
   background-position: -67px 0px;
   cursor: pointer;
 }
@@ -435,7 +435,7 @@
   float: left;
 }
 .lv_slider .lv_icon {
-  background: url('skins/light/sprite.png');
+  background: asset_data_url('skins/light/sprite.png');
   background-repeat: no-repeat;
   /* IE6 */
   position: absolute; 
@@ -603,8 +603,8 @@
 .lv_controls_top_skin_light .lv_icon,
 .lv_controls_top_close_skin_light .lv_controls_top_close_button,
 .lv_thumbnails_skin_light .lv_thumbnail_icon {
-  background-image: url('skins/light/sprite.png') !important;  
-  background-image: url('skins/light/sprite_ie_lt_7.png'); /* IE < 7 */
+  background-image: asset_data_url('skins/light/sprite.png') !important;
+  background-image: asset_data_url('skins/light/sprite_ie_lt_7.png'); /* IE < 7 */
 }
 
 
@@ -639,8 +639,8 @@
 .lv_controls_top_skin_dark .lv_icon,
 .lv_controls_top_close_skin_dark .lv_controls_top_close_button,
 .lv_thumbnails_skin_dark .lv_thumbnail_icon {
-  background-image: url('skins/dark/sprite.png') !important;
-  background-image: url('skins/dark/sprite_ie_lt_7.png'); /* IE < 7 */
+  background-image: asset_data_url('skins/dark/sprite.png') !important;
+  background-image: asset_data_url('skins/dark/sprite_ie_lt_7.png'); /* IE < 7 */
 }
 
 /* close button */
@@ -680,8 +680,8 @@
 .lv_controls_top_skin_mac .lv_icon,
 .lv_controls_top_close_skin_mac .lv_controls_top_close_button,
 .lv_thumbnails_skin_mac .lv_thumbnail_icon {
-  background-image: url('skins/mac/sprite.png') !important;
-  background-image: url('skins/mac/sprite_ie_lt_7.png'); /* IE < 7 */
+  background-image: asset_data_url('skins/mac/sprite.png') !important;
+  background-image: asset_data_url('skins/mac/sprite_ie_lt_7.png'); /* IE < 7 */
 }
 
 /* close button */
