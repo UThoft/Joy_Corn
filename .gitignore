@@ -8,7 +8,8 @@
 /.bundle
 
 # Ignore IDEA project files.
-/.idea
+.idea/
+config/database.yml
 
 # Ignore database.yml file
 /config/database.yml
