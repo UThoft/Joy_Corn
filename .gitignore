@@ -27,6 +27,3 @@ doc/
 .DS_Store
 .idea
 .secret
-
-# Ignore openshift files
-.openshift/
