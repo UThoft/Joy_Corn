@@ -26,7 +26,7 @@ class StaticPagesController < ApplicationController
     temp
   end
 
-  # return the next post page to enable infinite scroll.
+  # return the next posts page to enable infinite scroll.
   def next_post_panel
     temp = return_post_search_by($search_type, $keyword, 3, $current_index)
     $current_index = $current_index + 3

@@ -1,0 +1,126 @@
+<p>
+  Compose a new post.
+</p>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@post) do | f | %>
+        <%# render 'shared/error_messages' %>
+      <ul>
+        <li>
+          <%= f.label :media_type %>
+          <%= f.select(:media_type, options_for_select([['Text', 'text'],['Image', 'image'],['Audio', 'audio'],['Video', 'video']], @post.media_type)) %>
+        </li>
+        <li>
+            <%= f.label :user_id %>
+            <%= f.text_field :user_id, value: @post.user_id, placeholder: 'default: 1' %>
+        </li>
+        <li>
+          <%= f.label :title %>
+          <%= f.text_field :title, value: @post.title, placeholder: 'default: A New Joy' %>
+        </li>
+
+        <li>
+          <%# f.label :title %>
+          <%# f.hidden_field :id, @post.id %>
+        </li>
+
+        <li>
+          <%= f.label 'Text' %>
+          <%= f.fields_for :texts do |q| %>
+              <ul>
+                <li>
+                  <%= q.label :content %>
+                  <%= q.text_area :content, value: 'Just a sample' %>
+
+                </li>
+              </ul>
+          <% end %>
+          <%= f.submit 'Add text', :name => "add_text" %>
+
+        </li>
+
+
+        <li>
+          <%= f.label 'Image' %>
+          <%= f.fields_for :images do |q| %>
+              <ul>
+                <li>
+                  <%= q.label :link %>
+                  <%= q.text_area :link %>
+                </li>
+              </ul>
+
+          <% end %>
+          <%= f.submit 'Add image', :name => "add_image" %>
+
+        </li>
+        <li>
+          <%= f.label 'Audio' %>
+          <%= f.fields_for :audios do |q| %>
+              <ul>
+                <li>
+                  <%= q.label :link %>
+                  <%= q.text_area :link %>
+                </li>
+              </ul>
+
+          <% end %>
+          <%= f.submit 'Add audio', :name => "add_audio" %>
+
+        </li>
+
+        <li>
+          <%= f.label 'Video' %>
+          <%= f.fields_for :videos do |q| %>
+              <ul>
+                <li>
+                  <%= q.label :link %>
+                  <%= q.text_area :link %>
+                </li>
+              </ul>
+
+          <% end %>
+          <%= f.submit 'Add video', :name => "add_video" %>
+
+        </li>
+
+        <li>
+          <%= f.label 'Extra Tags' %>
+          <%= f.fields_for :tags do |q| %>
+              <ul>
+                <li>
+                  <%= q.label :name %>
+                  <%= q.text_field :name %>
+                </li>
+              </ul>
+
+          <% end %>
+          <%= f.submit 'Add tag', :name => "add_tag" %>
+        </li>
+
+        <li>
+          <%= f.collection_check_boxes :tags, Tag.all, :id, :name %>
+        </li>
+
+
+
+        <li>
+            <%# f.label :created_at %>
+            <%# f.datetime_select :created_at %>
+        </li>
+        <li>
+            <%# f.label :updated_at %>
+            <%# f.datetime_select :updated_at %>
+        </li>
+        <li>
+            <%= f.submit "Create post", class: "btn btn-large btn-primary" %>
+
+            <%# f.submit 'Delete checked element', :name => "remove_element" %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+</div>
+
+<%= debug(params) if Rails.env.development? %>

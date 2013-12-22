@@ -16,15 +16,15 @@
         category-video tag-video-2 black">
     <% end %>
 
-    <!--post icon-->
+    <!--posts icon-->
 
       <!--some style parameters have to be inserted-->
             <div class="post-inner clearfix">
                 <span class="post-icon"></span>
-    <!--/post icon-->
+    <!--/posts icon-->
 
-    <!--post image-->
-              <%# images = get_post_media("image", post.id) %>
+    <!--posts image-->
+              <%# images = get_post_media("image", posts.id) %>
               <% images = post.images %>
               <% images.each do |image| %>
                   <% unless image.nil? %>
@@ -35,16 +35,16 @@
                       <% end %>
                       <p class="post-image">
                         <!--<a href="http://themify.me/demo/themes/wumblr/files/2012/09/86529817.jpg" class="lightview">-->
-                          <%= link_to image_tag(image_src, alt: "Lightbox Photo", width: "244"), post_view_path(:post_id => post.id), class: "lightview" %>
+                          <%= link_to image_tag(image_src, alt: "Lightbox Photo", width: "244"), view_posts_path(:post_id => post.id), class: "lightview" %>
 
                         <!--<div id="viewer">hello</div>-->
                       </p>
                   <% end %>
               <% end %>
-    <!--/post image-->
+    <!--/posts image-->
 
-    <!--post audio-->
-              <%# audios = get_post_media("audio", post.id) %>
+    <!--posts audio-->
+              <%# audios = get_post_media("audio", posts.id) %>
               <% audios = post.audios %>
               <% audios.each do |audio| %>
                   <% unless audio.nil? %>
@@ -65,9 +65,9 @@
                       </div>
                   <% end %>
               <% end %>
-    <!--/post audio-->
+    <!--/posts audio-->
 
-    <!--post video-->
+    <!--posts video-->
               <% videos = post.videos %>
               <% videos.each do |video| %>
                   <% unless video.nil? %>
@@ -83,16 +83,16 @@
                       </div>
                   <% end %>
               <% end %>
-    <!--/post video-->
+    <!--/posts video-->
 
-    <!--post content-->
+    <!--posts content-->
                 <div class="post-content">
                   <h1 class="post-title">
-                    <!--<a href="#post-viewer" class="lightview">-->
+                    <!--<a href="#posts-viewer" class="lightview">-->
                       <!---->
-                      <!--<%# post.title %>-->
+                      <!--<%# posts.title %>-->
                     <!--</a>-->
-                    <%= link_to post.title, post_view_path(:post_id => post.id), class: "lightview" %>
+                    <%= link_to post.title, view_posts_path(:post_id => post.id), class: "lightview" %>
                   </h1>
                   <p>
                   <% texts = post.texts %>
@@ -103,18 +103,18 @@
                   <% end %>
                   </p>
                 </div>
-    <!--/post content-->
+    <!--/posts content-->
 
-    <!--post comment-->
+    <!--posts comment-->
                 <div class="post-comment">
-                  <%= link_to post.likes.size, post_view_path(:post_id => post.id), class: "lightview comment-link" %>
+                  <%= link_to post.likes.size, view_posts_path(:post_id => post.id), class: "lightview comment-link" %>
                 </div>
-    <!--/post comment-->
+    <!--/posts comment-->
 
-    <!--post like-->
-    <!--/post like-->
+    <!--posts like-->
+    <!--/posts like-->
 
-    <!--post meta-->
+    <!--posts meta-->
               <div class="post-meta">
 
                 <% tags = post.tags %>
@@ -133,11 +133,11 @@
                 </span>
                 •
                 <span class="post-author">
-                    <%# user = get_post_author(post.user_id) %>
+                    <%# user = get_post_author(posts.user_id) %>
                     <%= link_to post.user.name, static_pages_search_path(:search_type => 'author', :keyword => post.user.name) %>
                 </span>
               </div>
-    <!--/post meta-->
+    <!--/posts meta-->
 
             </div>
         </div>
