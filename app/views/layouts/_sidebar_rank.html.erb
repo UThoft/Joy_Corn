@@ -12,7 +12,7 @@
     </li>
 </ul>
 
-<div id="tabcontent1">
+<div id="tabcontent1" class="tabcontent">
   <% likes_1 = get_hottest('post', 1.day.ago) %>
   <% likes_1.each do |like_1| %>
       <%= like_1.post.title unless like_1.nil? %>
@@ -20,15 +20,15 @@
   <% end %>
 </div>
 
-<div id="tabcontent2">
+<div id="tabcontent2" class="tabcontent">
   <% likes_2 = get_hottest('post', 1.week.ago) %>
   <% likes_2.each do |like_2| %>
       <%= like_2.post.title unless like_2.nil? %>
       <br>
-<% end %>
+  <% end %>
 </div>
 
-<div id="tabcontent3">
+<div id="tabcontent3" class="tabcontent">
   <% likes_3 = get_hottest('post', 1.month.ago) %>
   <% likes_3.each do |like_3| %>
       <%= like_3.post.title unless like_3.nil? %>

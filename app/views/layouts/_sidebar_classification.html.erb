@@ -1,6 +1,11 @@
 
 
-<h4><a href="javascript:showMenu('topics')">TOPICS</a></h4>
+<h4>
+  <a href="javascript:showMenu('topics')">
+    <!--<%= image_tag("sidebar/sort.png", class:"sidebar-c-icon") %>-->
+    TOPICS
+  </a>
+</h4>
 <ul class="sidebarUl" id="topics">
   <li class="sideButton">
     <%= link_to 'default', static_pages_search_path(:search_type => 'topic', :keyword => 'default') %>
@@ -10,6 +15,7 @@
 <h4><a href="javascript:showMenu('types')">TYPES</a></h4>
 <ul class="sidebarUl" id="types">
   <li class="sideButton">
+
     <%= link_to 'text', static_pages_search_path(:search_type => 'type', :keyword => 'text') %>
   </li>
   <li class="sideButton">
@@ -23,17 +29,6 @@
   </li>
 </ul>
 
-
-
-<h4><a href="javascript:showMenu('popTags')">POPULAR TAGS</a></h4>
-<ul class="sidebarUl" id="popTags">
-  <% tags = get_popular_tags %>
-  <% tags.each do |tag| %>
-      <li class="sideButton">
-        <%= link_to tag[0].to_s + ' (' + tag[1].to_s + ')', static_pages_search_path(:search_type => 'tag', :keyword => tag[0]) %>
-      </li>
-  <% end %>
-</ul>
 
 <h4><a href="javascript:showMenu('postTime')">POSTING TIME</a></h4>
 <ul class="sidebarUl" id="postTime">
@@ -49,4 +44,15 @@
   <li class="sideButton">
     <%= link_to 'in one month', static_pages_search_path(:search_type => 'time', :keyword => 1.month.ago) %>
   </li>
+</ul>
+
+
+<h4><a href="javascript:showMenu('popTags')">POPULAR TAGS</a></h4>
+<ul id="popTags">
+  <% tags = get_popular_tags %>
+  <% tags.each do |tag| %>
+      <li>
+        <%= link_to tag[0].to_s + ' (' + tag[1].to_s + ')', static_pages_search_path(:search_type => 'tag', :keyword => tag[0]) %>
+      </li>
+  <% end %>
 </ul>
