@@ -78,11 +78,6 @@ JoyCorn::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  if ENV['FORCE_ASSET_PRECOMPILE'].nil? || ENV['FORCE_ASSET_PRECOMPILE'] != 'true'
-    puts "Skipping precompile: FORCE_ASSET_PRECOMPILE='#{ENV['FORCE_ASSET_PRECOMPILE']}'"
-    config.assets.precompile = []
-  end
-
-  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+  # config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
 end
