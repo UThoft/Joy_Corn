@@ -1,0 +1,98 @@
+#featured-list {
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-height: 100%;
+}
+
+#featured-list li {
+  margin-bottom: 10px;
+  width: 100%;
+//  standard size. use absolute.
+  min-height: 100px;
+  max-height: 120px;
+}
+
+#featured-list .media-container {
+
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  height: 70px;
+//  margin-bottom: 3px;
+  background-color: #f4f4f4;
+  border: solid 2px #000000;
+}
+
+#featured-list .info-container {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  height: 30%;
+//  margin-bottom: 3px;
+  background-color: #f4f4f4;
+//  border: solid 2px yellow;
+}
+
+.center-cropped {
+  width: 100%;  // change to desired width.
+  height: inherit; // change to desired height.
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+}
+
+/* Set the image to fill its parent and make transparent */
+.center-cropped a {
+  height: inherit;
+  width: inherit;
+  /* modern browsers */
+  opacity: 0;
+}
+
+.center-cropped a img {
+  height: inherit;
+  width: inherit;
+  /* modern browsers */
+  opacity: 0;
+}
+
+.media-container .featured-media-button {
+  height: 100%;
+  width: 100%;
+//  border: solid 2px blue;
+}
+
+.media-container .featured-media-button a{
+  height: 100%;
+  width: 100%;
+//  border: solid 2px blue;
+}
+
+.media-container .featured-media-button a img{
+  position: relative;
+  height: 60%;
+  width: 30%;
+  top: 20%;
+  left: 35%;
+}
+
+//.media-container .featured-audio-button {
+//  height: 100%;
+//  width: 100%;
+//}
+//
+//.media-container .featured-audio-button a{
+//  height: 100%;
+//  width: 100%;
+//}
+//
+//.media-container .featured-audio-button a img{
+//  position: relative;
+//  height: 60%;
+//  width: 30%;
+//  top: 20%;
+//  left: 35%;
+//}

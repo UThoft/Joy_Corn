@@ -13,26 +13,17 @@
 </ul>
 
 <div id="tabcontent1" class="tabcontent">
-  <% likes_1 = get_hottest('post', 1.day.ago) %>
-  <% likes_1.each do |like_1| %>
-      <%= like_1.post.title unless like_1.nil? %>
-      <br>
-  <% end %>
+  <% @likes = get_hottest('post', 1.day.ago, 10) %>
+  <%= render 'layouts/featured_list' %>
 </div>
 
 <div id="tabcontent2" class="tabcontent">
-  <% likes_2 = get_hottest('post', 1.week.ago) %>
-  <% likes_2.each do |like_2| %>
-      <%= like_2.post.title unless like_2.nil? %>
-      <br>
-  <% end %>
+  <% @likes = get_hottest('post', 1.week.ago, 10) %>
+  <%= render 'layouts/featured_list' %>
 </div>
 
 <div id="tabcontent3" class="tabcontent">
-  <% likes_3 = get_hottest('post', 1.month.ago) %>
-  <% likes_3.each do |like_3| %>
-      <%= like_3.post.title unless like_3.nil? %>
-      <br>
-<% end %>
+  <% @likes = get_hottest('post', 1.month.ago, 10) %>
+  <%= render 'layouts/featured_list' %>
 </div>
 

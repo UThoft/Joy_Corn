@@ -8,12 +8,12 @@ module StaticPagesHelper
     tag_hash.sort_by {|_, x| x}.reverse[0, 10]
   end
 
-  def get_hottest(type, value)
+  def get_hottest(type, value, number)
   #  support load the famous posts or authors within a time
     if type == 'post'
-      get_hottest_posts_by_time(value)
+      get_hottest_posts_by_time(value, number)
     elsif type == 'author'
-      get_hottest_authors_by_time(value)
+      get_hottest_authors_by_time(value, number)
     else
     end
   
@@ -21,12 +21,20 @@ module StaticPagesHelper
   
   private
 
-  def get_hottest_posts_by_time(value)
-    Like.where("created_at > ?", value).select('post_id').order(post_id: :asc).group('post_id')
+  def get_hottest_posts_by_time(value, number)
+    Like.where("created_at > ?", value).select('post_id').order(post_id: :asc).group('post_id').limit(number)
   end
 
-  def get_hottest_authors_by_time(value)
+  def get_hottest_authors_by_time(value, number)
 
+  end
+
+
+  def get_proper_media_by_size(post, height, width)
+    if post.instance_of?(Post)
+
+    else
+    end
   end
 
 end

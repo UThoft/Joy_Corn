@@ -1,0 +1,41 @@
+<ul id="featured-list">
+  <% @likes.each do |like| %>
+      <% post = like.post %>
+      <li class="featured-item">
+        <div class="media-container">
+          <% if post.media_type == 'image' %>
+
+              <% image = post.images.first %>
+              <% unless image.nil? %>
+                  <% if image.link.include? "http" %>
+                      <% image_src = image.link %>
+                  <% else %>
+                      <% image_src = image_path(image.link) %>
+                  <% end %>
+                  <div class="center-cropped"
+                       style="background-image: url(<%= image_src %>)">
+                  <%# image_tag(image_src)%>
+                    <%= link_to image_tag(image_src, alt: "Lightbox Photo"), view_posts_path(:post_id => post.id), class: "lightview" %>
+                  </div>
+              <% end %>
+
+          <% elsif post.media_type == 'video' %>
+              <div class="featured-media-button">
+                <%= link_to image_tag('video-icon.png'), view_posts_path(:post_id => post.id), class: "lightview" %>
+              </div>
+          <% elsif post.media_type == 'audio' %>
+              <div class="featured-media-button">
+                <%= link_to image_tag('audio-icon.png'), view_posts_path(:post_id => post.id), class: "lightview" %>
+              </div>
+          <% elsif post.media_type == 'text' %>
+              <div class="featured-media-button">
+                <%= link_to image_tag('text-icon.png'), view_posts_path(:post_id => post.id), class: "lightview" %>
+              </div>
+          <% end %>
+        </div>
+        <div class="info-container">
+          <%= post.title unless like.nil? %>
+        </div>
+      </li>
+  <% end %>
+</ul>
