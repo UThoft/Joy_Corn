@@ -58,7 +58,10 @@ POST
   float: left;
   width: 85%;
   border-radius: 6px;
-  padding: 20px 20px;
+  padding-left: 20px;
+  padding-top: 40px;
+//  padding: 20px 20px;
+//  height: 100%;
 //  position: relative;
 //  border: solid 2px blue;
 }
@@ -75,7 +78,7 @@ POST
 .post-title {
   margin: 0 0 5px;
   padding: 0;
-  font-family: 'autour';
+//  font-family: 'autour';
 //  font: bold 140%/120% "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   font: bold 140%/120% "autour", "Lucida Sans Unicode", sans-serif;
   text-shadow: 0 1px 0 rgba(255, 255, 255, .6);
@@ -112,6 +115,40 @@ POST
 .post .post-comment a:hover {
   color: #000;
   text-decoration: none;
+}
+
+.post-like-banner {
+  position: absolute;
+  width: 99%;
+  height: 30px;
+  left: 1%;
+  right: 1%;
+  top: 1%;
+  opacity: 0.1;
+//  for shadow
+//  background-color: #2E2F30;
+  box-shadow: 2px 2px 2px #888;
+  border-radius: 4px;
+//  padding-bottom: 1%;
+//  margin-bottom: 1%;
+//  margin-top: 1%;
+//  border: solid 2px #000000;
+}
+
+.post-like-banner .like-yes {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: green;
+  opacity: 0.5;
+}
+
+.post-like-banner .like-no {
+  float: right;
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  opacity: 0.5;
 }
 
 

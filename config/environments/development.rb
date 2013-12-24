@@ -28,7 +28,7 @@ JoyCorn::Application.configure do
   config.assets.debug = true
 
   #config.assets.digest = true
-  config.assets.prefix = "/dev-assets"
+  #config.assets.prefix = "/dev-assets"
 
 
 
