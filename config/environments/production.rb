@@ -80,6 +80,8 @@ JoyCorn::Application.configure do
 
   config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
+  config.assets.precompile += %w( *.svg *.eot *.woff *.ttf )
+
   config.assets.compress = true
 
 
