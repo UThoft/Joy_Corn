@@ -12,3 +12,14 @@
 # prevent your application from stopping cleanly or starting at all.
 # Application start and stop is subject to different timeouts
 # throughout the system.
+
+# prevent automatically start the precompile
+
+cd $OPENSHIFT_REPO_DIR
+if [ -f Gemfile.hidden ]
+  then
+    echo ----------------------------[ Cheating: rename Gemfile.hidden to Gemfile ]
+    mv Gemfile.hidden Gemfile
+  else
+    echo ----------------------------[ Not cheating: Gemfile.hidden not found ]
+fi
