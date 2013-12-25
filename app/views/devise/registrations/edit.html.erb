@@ -1,0 +1,43 @@
+<div class="login-form">
+  <h1 class="login-title">Edit <%= resource_name.to_s.humanize %></h1>
+
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="form-group">
+        <%# f.label :email %>
+        <%= f.email_field :email, :placeholder => 'Enter your email', :autofocus => true, :class => "form-control login-field", :id => "reg-email" %>
+        <label class="login-field-icon user-icon" for="reg-email"></label>
+      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+      <i>(leave blank if you don't want to change it)</i><br />
+      <div class="form-group">
+
+          <%= f.password_field :password , :autocomplete => "off", :placeholder => 'Password', :class => "form-control login-field", :id => "reg-pass" %>
+        <label class="login-field-icon lock-icon" for="reg-pass"></label>
+      </div>
+
+      <div class="form-group">
+        <%# f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, :placeholder => 'Confirm new password', :class => "form-control login-field", :id => "reg-con-pass"  %>
+        <label class="login-field-icon lock-icon" for="reg-con-pass"></label>
+      </div>
+      <i>(we need your current password to confirm your changes)</i><br />
+      <div class="form-group">
+        <%= f.password_field :current_password , :placeholder => 'Confirm current password', :class => "form-control login-field", :id => "login-pass"%>
+        <label class="login-field-icon lock-icon" for="login-pass"></label>
+      </div>
+
+        <div><%= f.submit "Update", :class => "btn btn-primary btn-lg btn-block"%></div>
+  <% end %>
+
+  <h3 style="margin-top: 10px">Cancel my account</h3>
+
+  <p>Tell us your advice! <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => "btn-sm" %></p>
+
+  <%= link_to "Back", :back %>
+
+</div>
