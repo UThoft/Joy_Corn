@@ -82,4 +82,12 @@ JoyCorn::Application.configure do
 
   config.assets.compress = true
 
+
+  # the host to send the email. it seems this should be the original address instead of the joycorn.tk.
+  config.action_mailer.default_url_options = { :host => "joycorn.tk", :protocol => 'https' }
+
+
+  # debug should be turn off.
+  #config.assets.debug = true
+
 end

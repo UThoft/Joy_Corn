@@ -105,7 +105,7 @@
           <div class="post-author-name">
                 <%# user = get_post_author(posts.user_id) %>
               <%# posts.user.name %>
-            <%= link_to post.user.name %>
+            <%= link_to post.user.email %>
           </div>
           <div class="post-date">
             <%= time_ago_in_words(post.created_at) + " ago" %>

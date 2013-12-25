@@ -40,6 +40,22 @@ html, body {
 //  border: solid 2px yellow;
 }
 
+#notification {
+  width: 100%;
+//  border: solid 2px yellow;
+
+}
+
+#notification .notice {
+  width: 100%;
+  text-align: center;
+}
+
+#notification .alert {
+  width: 100%;
+  text-align: center;
+}
+
 #main-panel {
 //  position: ;
   float: left;
@@ -47,7 +63,7 @@ html, body {
   left: 0;
   width: 100%;
 //  min-height: 100%;
-  margin-top: 2%;
+  margin-top: 1%;
 //  border: solid 2px #ff912f;
 //  float: left;
 //  clear: both;

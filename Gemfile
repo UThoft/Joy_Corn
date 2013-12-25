@@ -13,6 +13,7 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem 'masonry-rails'
 gem 'jquery-turbolinks'
 gem 'gon', '4.1.1'
+gem 'devise'
 
 
 #group :development, :test do

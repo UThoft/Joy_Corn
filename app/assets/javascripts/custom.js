@@ -42,3 +42,12 @@ $(document).ready(function(){
 
 
 });
+
+$(document).ready(function() {
+    if (document.getElementById('notification-notice').getAttribute('data-notice-text').length != 0) {
+        $('p#notification-notice').fadeOut(4000);
+    }
+    if (document.getElementById('notification-alert').getAttribute('data-notice-text').length != 0) {
+        $('p#notification-alert').fadeOut(4000);
+    }
+});

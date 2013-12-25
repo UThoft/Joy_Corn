@@ -23,3 +23,24 @@
 //  border: solid 2px blue;
 }
 
+#log-wrap {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+ul.hmenu {
+  list-style: none;
+//  margin-left: 10px;
+  padding: 0;
+}
+
+ul.hmenu li {
+  margin-left: 10px;
+  display: inline;
+
+}
+
+ul.hmenu li a {
+  color: #000000;
+}

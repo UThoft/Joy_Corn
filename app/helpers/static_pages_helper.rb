@@ -18,7 +18,19 @@ module StaticPagesHelper
     end
   
   end
-  
+
+  def user_like_post?(user_id, post_id)
+    User.find(user_id).likes.find_by_post_id(post_id).blank?
+  end
+
+  def get_like_number_by_post(post_id)
+    Post.find(post_id).likes.size
+  end
+
+  def get_unlike_number_by_post(post_id)
+    Post.find(post_id).unlikes.size
+  end
+
   private
 
   def get_hottest_posts_by_time(value, number)

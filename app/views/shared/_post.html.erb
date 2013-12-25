@@ -147,7 +147,7 @@
                 •
                 <span class="post-author">
                     <%# user = get_post_author(posts.user_id) %>
-                    <%= link_to post.user.name, static_pages_search_path(:search_type => 'author', :keyword => post.user.name) %>
+                    <%= link_to post.user.email, static_pages_search_path(:search_type => 'author', :keyword => post.user.email) %>
                 </span>
               </div>
     <!--/posts meta-->

@@ -50,7 +50,7 @@ class StaticPagesController < ApplicationController
     elsif search_type == 'time'
       Post.where("created_at >= ?", keyword).limit(post_number).offset(start_point).order(created_at: :desc)
     elsif search_type == 'author'
-      User.find_by_name(keyword).posts.limit(post_number).offset(start_point).order(created_at: :desc)
+      User.find_by_email(keyword).posts.limit(post_number).offset(start_point).order(created_at: :desc)
     else
     end
   end
