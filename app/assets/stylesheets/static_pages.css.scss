@@ -31,7 +31,7 @@ html, body {
 
 
 #header {
-  background: asset_url("header_bg.png") repeat;
+  background: url(asset_path("header_bg.png")) repeat;
   position: relative;
   height: 180px;
   width: 100%;
