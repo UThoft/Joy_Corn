@@ -19,15 +19,8 @@
     <!--posts icon-->
     <!--posts like-->
 
+    <%= render 'shared/like_button', :post => post %>
 
-        <div class="post-like-banner">
-          <div class="like-yes">
-
-          </div>
-          <div class="like-no">
-
-          </div>
-        </div>
     <!--/posts like-->
 
       <!--some style parameters have to be inserted-->
@@ -119,11 +112,11 @@
                 </div>
     <!--/posts content-->
 
-    <!--posts comment-->
-                <div class="post-comment">
-                  <%= link_to post.likes.size, view_posts_path(:post_id => post.id), class: "lightview comment-link" %>
-                </div>
-    <!--/posts comment-->
+    <!--&lt;!&ndash;posts comment&ndash;&gt;-->
+                <!--<div class="post-comment">-->
+                  <!--<%# link_to post.likes.size, view_posts_path(:post_id => post.id), class: "lightview comment-link" %>-->
+                <!--</div>-->
+    <!--&lt;!&ndash;/posts comment&ndash;&gt;-->
 
 
 

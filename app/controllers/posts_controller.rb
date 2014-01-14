@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(user_params)
+    @post = Post.new(post_params)
     if params[:add_text]
       @post.texts.build
     elsif params[:add_image]
@@ -49,7 +49,7 @@ class PostsController < ApplicationController
 
   private
 
-  def user_params
+  def post_params
 
 
 

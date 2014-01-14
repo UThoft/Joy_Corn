@@ -19,9 +19,7 @@ module StaticPagesHelper
   
   end
 
-  def user_like_post?(user_id, post_id)
-    User.find(user_id).likes.find_by_post_id(post_id).blank?
-  end
+
 
   def get_like_number_by_post(post_id)
     Post.find(post_id).likes.size

@@ -1,0 +1,1 @@
+$("#post-like-<%= @post.id %>").html("<%= escape_javascript render('shared/like_button', :post => @post) %>");

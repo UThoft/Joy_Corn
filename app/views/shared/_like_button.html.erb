@@ -1,0 +1,26 @@
+<div class="post-like-banner" id="<%='post-like-' + post.id.to_s %>">
+  <div class="like-yes">
+    <%# @post = post %>
+      <% if current_user && !current_user.like_post?(post.id) %>
+
+          <%= form_tag('/likes', :method => 'post', :remote => true) do %>
+              <%= hidden_field_tag(:user_id, current_user.id) %>
+              <%= hidden_field_tag(:post_id, post.id) %>
+              <%= submit_tag('Like', class: 'like-button like-unclicked') %>
+          <% end %>
+
+      <% else %>
+          <%= form_tag('/likes', method: "delete", action: "destroy", :remote => true) do %>
+              <%= hidden_field_tag(:id, post.likes.find_by_user_id(current_user.id).id) %>
+              <%= submit_tag("Like", class: 'like-button like-clicked') %>
+          <% end %>
+      <% end %>
+  </div>
+  <div class="like-no">
+    <div class="like-number">
+      <%= link_to post.likes.size, view_posts_path(:post_id => post.id), class: "lightview comment-link", remote: true %>
+    </div>
+  </div>
+</div>
+
+

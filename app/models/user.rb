@@ -6,4 +6,9 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :likes
   has_many :unlikes
+
+  def like_post?(post_id)
+    !!self.likes.find_by_post_id(post_id)
+  end
+
 end

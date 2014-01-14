@@ -36,7 +36,7 @@
 
               <div id="container" class="home page page-id-367 page-template-default skin-default gecko not-ie query-page query-post sidebar-none">
                 <%= yield %>
-
+                <%# params[:current_user] = current_user %>
                 <%# debug(params) if Rails.env.development? %>
                 <div id="footer">
                   <%= render 'layouts/footer' %>
@@ -53,6 +53,8 @@
         </div>
 
         <%# render 'posts/view' %>
+
+
 
     </body>
 </html>

@@ -5,6 +5,8 @@ JoyCorn::Application.routes.draw do
       get 'view'
     end
   end
+  post '/likes' => 'likes#create'
+  delete '/likes' => 'likes#destroy'
   match 'page/:id' => 'static_pages#next', via:[:GET]
   get "static_pages/index"
   get "static_pages/help"
