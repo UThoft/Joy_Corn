@@ -122,30 +122,37 @@
     <% end %>
     </div>
 
-    <div class="viewer-comment-item">
-      <%= image_tag("user.jpg", class:"user-comment-pic") %>
-      <div class="viewer-comment-content">
-        <div class="comment-author">Illhamy</div>
-        <div class="comment-text">hahahahaha~hahahahaha~hahahahahahahahahahahahah</div>
-        <div class="comment-post-date">37 minutes ago</div>
+    <!--viewer-comment-box-->
 
-      </div>
-    </div>
-    <div class="viewer-comment-item">
-      <%= image_tag("user.jpg", class:"user-comment-pic") %>
-          <div class="viewer-comment-content">
-            <div class="comment-author">Zoe</div>
-            <div class="comment-text">hahahahahahahahahahah</div>
-            <div class="comment-post-date">17 minutes ago</div>
+    <!--<div class="viewer-comment-item">-->
+      <!--<%# image_tag("user.jpg", class:"user-comment-pic") %>-->
+      <!--<div class="viewer-comment-content">-->
+        <!--<div class="comment-author">Illhamy</div>-->
+        <!--<div class="comment-text">hahahahaha~hahahahaha~hahahahahahahahahahahahah</div>-->
+        <!--<div class="comment-post-date">37 minutes ago</div>-->
 
-          </div>
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="viewer-comment-item">-->
+      <!--<%# image_tag("user.jpg", class:"user-comment-pic") %>-->
+          <!--<div class="viewer-comment-content">-->
+            <!--<div class="comment-author">Zoe</div>-->
+            <!--<div class="comment-text">hahahahahahahahahahah</div>-->
+            <!--<div class="comment-post-date">17 minutes ago</div>-->
 
-    </div>
-    <div class="viewer-add-comment">
-      <%= image_tag("user.jpg", class:"user-comment-pic") %>
-      <input type="text" id="add-comment" name="add-comment" placeholder="Add your comment!">
+          <!--</div>-->
 
-    </div>
+    <!--</div>-->
+    <!--<div class="viewer-add-comment">-->
+      <!--<%# image_tag("user.jpg", class:"user-comment-pic") %>-->
+      <!--<input type="text" id="add-comment" name="add-comment" placeholder="Add your comment!">-->
+
+    <!--</div>-->
+
+    <%= render partial: 'the_comments/tree', locals: { commentable: @post, comments_tree: @comments } %>
+
+    <!--viewer-comment-box-->
+
   </div>
 </div>
 

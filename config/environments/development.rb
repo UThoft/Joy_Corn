@@ -34,6 +34,4 @@ JoyCorn::Application.configure do
 
   #config.assets.compress = true
 
-
-
 end

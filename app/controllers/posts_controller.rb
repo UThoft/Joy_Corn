@@ -1,11 +1,14 @@
 class PostsController < ApplicationController
   def view
     @post = Post.find(params[:post_id])
+    @comments = @post.comments.with_state([:draft, :published])
     render partial: 'posts/view'
   end
 
   def show
     @post = Post.find(params[:id])
+    @comments = @post.comments.with_state([:draft, :published])
+    render partial: 'posts/view'
   end
 
   def new
@@ -64,4 +67,5 @@ class PostsController < ApplicationController
 
 
   end
+
 end

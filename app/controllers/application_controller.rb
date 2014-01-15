@@ -1,7 +1,9 @@
 class ApplicationController < ActionController::Base
+  include TheComments::ViewToken
+
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
-  protect_from_forgery
+  protect_from_forgery with: :exception
 
   helper_method :current_user
   alias_method :devise_current_user, :current_user
@@ -12,7 +14,7 @@ class ApplicationController < ActionController::Base
       if cookies[:guest_user_id]
         logging_in
         guest_user.destroy
-        cookies[:guest_user_id] = nil
+        cookies.delete :guest_user_id
       end
       devise_current_user
     else

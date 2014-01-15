@@ -15,6 +15,13 @@ gem 'jquery-turbolinks'
 gem 'gon', '4.1.1'
 gem 'devise'
 
+# the comments is for comment system. haml and awesome nested set are its dependency.
+
+gem "the_comments", "~> 2.2.1"
+
+gem 'haml'                # or gem 'slim'
+gem "awesome_nested_set", "~> 3.0.0.rc.3" # or same gem
+
 
 #group :development, :test do
 #  gem 'rspec-rails', '2.13.1'
@@ -78,4 +85,4 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]

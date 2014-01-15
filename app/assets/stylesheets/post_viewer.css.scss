@@ -60,10 +60,11 @@
 #post-viewer-left #post-viewer-content {
 
 //  border: solid 0.5px yellow;
-  height: 100%;
+  height: 85%;
   position: relative;
   right: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
   display: table;
 
@@ -83,22 +84,23 @@
   right: 0;
   top: 0;
   bottom: 0;
-  display: table;
+  display: table-cell;
+  vertical-align: middle;
 //  border: solid 2px red;
 //  line-height: 500px;
 }
 
 #post-viewer-content .format-image {
 //  border: solid 2px #ffffff;
-  position: absolute;
-
-  max-height: 100%;
-  max-width: 100%;
-  top: 0;
-  bottom: 0;
+  position: relative;
+  /* height: inherit; */
+  /* max-width: 100%; */
+  /* top: 0; */
+  /* bottom: 0; */
   left: 0;
   right: 0;
-  line-height: 500px; // only works for image
+  line-height: 500px;
+  display: table-cell;
 }
 
 .viewer-text-format{
@@ -114,23 +116,32 @@
   
 }
 
-#post-viewer-content .format-image img{
-  //  position: absolute;
-  //  height: 100%;
-//  line-height: 100%;
+#post-viewer-content .format-image img {
   position: relative;
-  max-width: 95%;
+  bottom: 5px;
+  top: 5px;
+  /* left: 0; */
+  /* right: 0; */
+  height: 80%;
+  width: auto;
+//  max-height: 80%;
+//  max-width: 80%;
   padding-bottom: 10px;
   padding-top: 10px;
   vertical-align: middle;
-  //  max-height: 100%;
-  //  resize: vertical;
-//  overflow: scroll;
+}
+
+
+#post-viewer-content .format-audio {
+  display: table-cell;
+  line-height: 500px;
 }
 
 #post-viewer-content .format-audio audio {
-  max-height: 100%;
-  max-width: 100%;
+  height: 80%;
+  width: 80%;
+//  display: table-cell;
+  vertical-align: middle;
 }
 
 /*------------viewer left side end-----------*/
@@ -143,6 +154,9 @@
   width: 28%;
   margin: 0;
   padding: 1%;
+  padding-bottom: 0;
+//  padding-bottom: 50px;
+//  border: solid blue 2px;
 }
 
 /*--------------posts author----------------*/

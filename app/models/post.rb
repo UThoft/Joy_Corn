@@ -1,4 +1,7 @@
 class Post < ActiveRecord::Base
+  include TheComments::Commentable
+
+
   has_many :texts
   has_many :images
   has_many :audios
@@ -15,5 +18,16 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :audios
   accepts_nested_attributes_for :videos
 
+  def commentable_title
+    title
+  end
+
+  def commentable_url
+    ['', self.class.to_s.tableize, id].join('/')
+  end
+
+  def commentable_state
+    :published.to_s
+  end
 
 end

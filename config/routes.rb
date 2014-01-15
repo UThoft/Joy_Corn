@@ -1,4 +1,8 @@
 JoyCorn::Application.routes.draw do
+  # You can have the root of your site routed with "root"
+  # root 'welcome#index'
+  root 'static_pages#index'
+
   devise_for :users
   resources :posts do
     collection do
@@ -16,9 +20,10 @@ JoyCorn::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-  root 'static_pages#index'
+  # TheComments routes
+  concern   :user_comments,  TheComments::UserRoutes.new
+  concern   :admin_comments, TheComments::AdminRoutes.new
+  resources :comments, concerns:  [:user_comments, :admin_comments]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
