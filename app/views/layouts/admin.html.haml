@@ -7,8 +7,8 @@
     %title= content_for?(:title) ? yield(:title) : "Admin Panel"
     %link(href="favicon.ico" rel="shortcut icon")
 
-    = stylesheet_link_tag    'admin/admin_ui', media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag 'admin/admin_ui', "data-turbolinks-track" => true
+    = stylesheet_link_tag    'admin/admin_ui'
+    = javascript_include_tag 'admin/admin_ui'
     = csrf_meta_tags
 
   %body
