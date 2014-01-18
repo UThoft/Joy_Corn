@@ -7,7 +7,7 @@
             navSelector: '#nav-wrap',
             contentSelector: '#container',
             footerSelector: '#footer',
-            sidebarTopMargin: 20,
+            sidebarTopMargin: 0,
             footerThreshold: 40
         }, options);
 
@@ -15,16 +15,16 @@
 
             var sidebarSelector = $(this);
             var viewportHeight = $(window).height();
-            var viewportWidth = $(window).width();
+//            var viewportWidth = $(window).width();
             var documentHeight = $(document).height();
             var headerHeight = $(config.headerSelector).outerHeight();
-            var navHeight = $(config.navSelector).outerHeight();
+//            var navHeight = $(config.navSelector).outerHeight();
             var sidebarHeight = sidebarSelector.outerHeight();
             var contentHeight = $(config.contentSelector).outerHeight();
             var footerHeight = $(config.footerSelector).outerHeight();
             var scroll_top = $(window).scrollTop();
-            var fixPosition = contentHeight - sidebarHeight;
-            var breakingPoint1 = headerHeight + navHeight;
+//            var fixPosition = contentHeight - sidebarHeight;
+            var breakingPoint1 = headerHeight + parseInt($(config.headerSelector).css("margin-top"), 10);
             var breakingPoint2 = documentHeight - (sidebarHeight + footerHeight + config.footerThreshold);
 
             // calculate
@@ -45,6 +45,9 @@
 
                 }
 
+            }
+            else {
+                sidebarSelector.removeClass('sticky');
             }
         };
 

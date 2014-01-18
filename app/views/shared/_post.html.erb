@@ -43,7 +43,7 @@
                       <p class="post-image">
                         <!--<a href="http://themify.me/demo/themes/wumblr/files/2012/09/86529817.jpg" class="lightview">-->
                           <%= link_to image_tag(image_src, alt: "Lightbox Photo", width: "244"), view_posts_path(:post_id => post.id), class: "lightview" %>
-
+                          <!--<img src="<%= image_src %>" alt="Lightbox Photo" width="244">-->
                         <!--<div id="viewer">hello</div>-->
                       </p>
                   <% end %>
@@ -112,11 +112,9 @@
                 </div>
     <!--/posts content-->
 
-    <!--&lt;!&ndash;posts comment&ndash;&gt;-->
                 <!--<div class="post-comment">-->
                   <!--<%# link_to post.likes.size, view_posts_path(:post_id => post.id), class: "lightview comment-link" %>-->
                 <!--</div>-->
-    <!--&lt;!&ndash;/posts comment&ndash;&gt;-->
 
 
 

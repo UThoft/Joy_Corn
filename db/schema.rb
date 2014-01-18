@@ -54,6 +54,14 @@ ActiveRecord::Schema.define(version: 20140115005740) do
     t.string  "link",    null: false
   end
 
+  create_table "ip_cities", id: false, force: true do |t|
+    t.integer "ip_start",       limit: 8,   null: false
+    t.integer "ip_end",         limit: 8
+    t.string  "country_code_s", limit: 2
+    t.string  "country_code_l", limit: 3
+    t.string  "location",       limit: 100
+  end
+
   create_table "likes", force: true do |t|
     t.integer  "user_id"
     t.integer  "post_id"

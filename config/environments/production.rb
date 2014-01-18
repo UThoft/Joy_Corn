@@ -90,13 +90,14 @@ JoyCorn::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      :tls => true,
-      :address => "smtp.gmail.com",
-      :port => 587,
-      :domain => "gmail.com",
-      :authentication => :login,
-      :user_name => "owenwjowenwj",
-      :password => "dtl19901019"
+      :ssl => true,
+      :openssl_verify_mode => 'none',
+      :address => 'smtp.gmail.com',
+      :port => 465,
+      :domain => 'gmail.com',
+      :authentication => 'plain',
+      :user_name => 'owenwjowenwj@gmail.com',
+      :password => 'dtl19901019'
   }
 
   # debug should be turn off.

@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 gem 'pg', '0.15.1'
 
-gem 'bootstrap-sass', '2.3.2.0'
+gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
@@ -21,6 +21,11 @@ gem "the_comments", "~> 2.2.1"
 
 gem 'haml'                # or gem 'slim'
 gem "awesome_nested_set", "~> 3.0.0.rc.3" # or same gem
+
+# TheComments Admin UI gems
+
+# pagination
+gem 'kaminari'
 
 
 #group :development, :test do

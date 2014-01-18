@@ -1,11 +1,11 @@
 class CommentsController < ApplicationController
-  # layout 'admin'
+  layout 'admin'
 
   # Define your restrict methods and use them like this:
   #
-  # before_action :user_required,  except: %w[index create]
-  # before_action :owner_required, except: %w[index create]
-  # before_action :admin_required, only:   %w[total_draft total_published total_deleted total_spam]
+  #before_action :user_required,  except: %w[index create]
+  #before_action :owner_required, except: %w[index create]
+  #before_action :admin_required, only:   %w[total_draft total_published total_deleted total_spam]
   #skip_before_action :verify_authenticity_token
 
   include TheComments::Controller
@@ -22,9 +22,6 @@ class CommentsController < ApplicationController
   # %w[ draft published deleted spam ]
   # %w[ to_draft to_published to_deleted to_spam ]
   # %w[ total_draft total_published total_deleted total_spam ]
-  #
-
-
 
 
   #
@@ -47,4 +44,5 @@ class CommentsController < ApplicationController
   # %w[ draft published deleted spam ]
   # %w[ my_comments my_draft my_published ]
   # %w[ total_draft total_published total_deleted total_spam ]
+
 end

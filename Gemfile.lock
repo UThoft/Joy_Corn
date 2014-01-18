@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
+  revision: f7b18d522f7e0e0a6b5d6c2592f4e6f682efd390
+  specs:
+    bootstrap-sass (3.0.3.0)
+      sass (~> 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -30,8 +37,6 @@ GEM
     awesome_nested_set (3.0.0.rc.3)
       activerecord (>= 4.0.0, < 5)
     bcrypt-ruby (3.0.1)
-    bootstrap-sass (2.3.2.0)
-      sass (~> 3.2)
     bootstrap-will_paginate (0.0.9)
       will_paginate
     builder (3.1.4)
@@ -75,6 +80,9 @@ GEM
       railties (>= 3.1.0)
       turbolinks
     json (1.8.1)
+    kaminari (0.15.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -156,7 +164,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_nested_set (~> 3.0.0.rc.3)
   bcrypt-ruby (= 3.0.1)
-  bootstrap-sass (= 2.3.2.0)
+  bootstrap-sass!
   bootstrap-will_paginate (= 0.0.9)
   coffee-rails (= 4.0.0)
   debugger
@@ -167,6 +175,7 @@ DEPENDENCIES
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
   jquery-turbolinks
+  kaminari
   masonry-rails
   pg (= 0.15.1)
   rails (= 4.0.0)

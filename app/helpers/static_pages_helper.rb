@@ -47,4 +47,22 @@ module StaticPagesHelper
     end
   end
 
+  module IpHelper
+
+    def ip_to_int(ip_str)
+      sub_ips = ip_str.to_s.split('.')
+      ip_int = 0
+      sub_ips.each do |sub_ip|
+        ip_int = ip_int * 256 + sub_ip.to_s.to_i(10)
+      end
+      ip_int
+    end
+
+    def ip_masker(ip_str)
+      sub_ips = ip_str.to_s.split('.')
+      '[' + sub_ips[0] + '.' + sub_ips[1] + '.*' + ']'
+    end
+
+  end
+
 end

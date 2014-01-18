@@ -3,8 +3,8 @@
 
 <html>
 <head>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    'post_viewer/post_viewer', media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag 'post_viewer/post_viewer', "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
 </head>
@@ -37,7 +37,7 @@
               </div>
         <% elsif post.media_type == "image" %>
             <div id="post-viewer-media" class="post-view format-image
-            category-image">
+            category-image" freezeframe>
 
               <% image = post.images.first %>
               <% unless image.nil? %>
@@ -49,6 +49,7 @@
                   <!--<p class="posts-image">-->
                     <!--<a href="http://themify.me/demo/themes/wumblr/files/2012/09/86529817.jpg" class="lightview">-->
                       <%= image_tag(image_src)%>
+                      <!--<img src="<%= image_src %>">-->
                   <!--</p>-->
               <% end %>
         <% elsif post.media_type == "audio" %>
@@ -121,33 +122,6 @@
           <%= link_to tag.name, static_pages_search_path(:search_type => 'tag', :keyword => tag.name) %>
     <% end %>
     </div>
-
-    <!--viewer-comment-box-->
-
-    <!--<div class="viewer-comment-item">-->
-      <!--<%# image_tag("user.jpg", class:"user-comment-pic") %>-->
-      <!--<div class="viewer-comment-content">-->
-        <!--<div class="comment-author">Illhamy</div>-->
-        <!--<div class="comment-text">hahahahaha~hahahahaha~hahahahahahahahahahahahah</div>-->
-        <!--<div class="comment-post-date">37 minutes ago</div>-->
-
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="viewer-comment-item">-->
-      <!--<%# image_tag("user.jpg", class:"user-comment-pic") %>-->
-          <!--<div class="viewer-comment-content">-->
-            <!--<div class="comment-author">Zoe</div>-->
-            <!--<div class="comment-text">hahahahahahahahahahah</div>-->
-            <!--<div class="comment-post-date">17 minutes ago</div>-->
-
-          <!--</div>-->
-
-    <!--</div>-->
-    <!--<div class="viewer-add-comment">-->
-      <!--<%# image_tag("user.jpg", class:"user-comment-pic") %>-->
-      <!--<input type="text" id="add-comment" name="add-comment" placeholder="Add your comment!">-->
-
-    <!--</div>-->
 
     <%= render partial: 'the_comments/tree', locals: { commentable: @post, comments_tree: @comments } %>
 

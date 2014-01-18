@@ -6,7 +6,7 @@
     = link_to t('the_comments.cancel'), "#", class: "btn btn-warning edit", style: "display:none"
 
     - to_hide = comment.published? ? hidden : nil
-    - opts    = { remote: true, style: to_hide, method: :post }
+    - opts    = { :remote => true, style: to_hide, :method => :post }
     = link_to [:to_published, comment], opts.merge(class: "btn btn-primary to_published") do
       = t('the_comments.to_published')
     

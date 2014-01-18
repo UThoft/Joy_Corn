@@ -5,8 +5,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  helper_method :current_user
+  helper_method :current_user, :guest_user
   alias_method :devise_current_user, :current_user
+
+  around_filter :set_time_zone
 
   # if user is logged in, return current_user, else return guest_user
   def current_user
@@ -37,6 +39,14 @@ class ApplicationController < ActionController::Base
     guest_user
   end
 
+  def set_time_zone
+    old_time_zone = Time.zone
+    Time.zone = browser_timezone if browser_timezone.present?
+    yield
+  ensure
+    Time.zone = old_time_zone
+  end
+
   private
 
   # called (once) when the user logs in, insert any code your application needs
@@ -59,6 +69,14 @@ class ApplicationController < ActionController::Base
         like.destroy
       end
     end
+
+    guest_comments = guest_user.my_comments.with_state([:published, :draft])
+    guest_comments.each do |comment|
+    comment.user_id = devise_current_user.id
+    comment.title = devise_current_user.email
+    comment.save!
+    end
+
   end
 
   def create_guest_user
@@ -66,6 +84,10 @@ class ApplicationController < ActionController::Base
     u.save!(:validate => false)
     cookies[:guest_user_id] = {:value => u.id, :expires => 365.days.from_now}
     u
+  end
+
+  def browser_timezone
+    cookies["browser.timezone"]
   end
 
 end

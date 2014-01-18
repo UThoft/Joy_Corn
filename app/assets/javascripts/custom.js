@@ -29,6 +29,7 @@ $(document).ready(function(){
         },
         // trigger Masonry as a callback
         function( newElements ) {
+            // enable the freezeframe as a call back
             // hide new items while they are loading
             var $newElems = $( newElements ).css({ opacity: 0 });
             // ensure that images load before adding to masonry layout
@@ -51,3 +52,16 @@ $(document).ready(function() {
         $('p#notification-alert').fadeOut(4000);
     }
 });
+
+(function(){
+    window.BroswerTZone = window.BroswerTZone || {};
+    BroswerTZone.setCookie = function(){
+        var d = new Date();
+        d.setTime(d.getTime() + (356 * 24 * 60 * 60 * 1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie="browser.timezone=" + jstz.determine().name() + ";" + expires + "; path=/";
+    };
+    $(document).ready(function() {
+        BroswerTZone.setCookie();
+    });
+})(jQuery);
