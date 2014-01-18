@@ -82,6 +82,10 @@ JoyCorn::Application.configure do
 
   config.assets.precompile += %w( *.svg *.eot *.woff *.ttf )
 
+  config.assets.precompile += ['admin/admin_ui.js', 'admin/admin_ui.css']
+
+  config.assets.precompile += ['post_viewer/post_viewer.js', 'post_viewer/post_viewer.css']
+
   config.assets.compress = true
 
 
