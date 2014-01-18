@@ -19,15 +19,8 @@ test: &TEST
 production:
   adapter: postgresql
   encoding: utf8
-  database: JoyCorn
+  database: ubuntu
   host: localhost
   pool: 5
   username: owenwj
-  password:
-#  adapter: postgresql
-#  encoding: utf8
-#  database: ubuntu
-#  host: localhost
-#  pool: 5
-#  username: owenwj
-#  password: wbzdmm
+  password: wbzdmm
