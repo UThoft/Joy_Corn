@@ -25,6 +25,10 @@ JoyCorn::Application.routes.draw do
   concern   :admin_comments, TheComments::AdminRoutes.new
   resources :comments, concerns:  [:user_comments, :admin_comments]
 
+
+  resources :signed_urls, only: :index
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,0 +1,33 @@
+%form#file_upload(action="http://wecorn.s3.amazonaws.com" method="post" enctype="multipart/form-data")
+  -#= form_tag :action => "http://wecorn.s3.amazonaws.com", :method => :post, :enctype => "multipart/form-data", :id => :file_upload
+  -# http://wecorn.s3-website-ap-southeast-2.amazonaws.com
+  -# order is important!
+  -# information of these parameters can be found in http://aws.amazon.com/articles/1434.
+  -# also, the things that are not filled in right now *will* be filled in soon.  See below.
+  %input{:type => :hidden, :name => :key}
+  -# this key should not be put here, use a helper function or controller to encapsulate it.
+  %input{:type => :hidden, :name => "AWSAccessKeyId"}
+  %input{:type => :hidden, :name => :acl,  :value => 'public-read'}
+  %input{:type => :hidden, :name => :success_action_status, :value => "200"}
+
+  -# the below line means that the browser will redirect to the pointed page if the uploading is successful
+  -# and the Amazon will give the bucket, key and etag parameters to the URL value
+  -#%input{:type => :hidden, :name => :success_action_redirect, :value => root_url}
+
+  %input{:type => :hidden, :name => :policy}
+  %input{:type => :hidden, :name => :signature}
+
+  -# the types of the valid files can be set as below.
+  -# %input{:type => :hidden, :name => :Content-Type, :value => "image/jpeg"}
+
+  -# Include any additional input fields here
+
+  .fileupload-content
+    .fileupload-progress
+  .file-upload
+    %label.fileinput-button
+      %span Upload Document
+      %input{:type => :file, :name => :file}
+
+
+  - # You can recognize some bootstrap markup here :)

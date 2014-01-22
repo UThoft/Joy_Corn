@@ -90,7 +90,7 @@ JoyCorn::Application.configure do
 
 
   # the host to send the email. it seems this should be the original address instead of the joycorn.tk.
-  config.action_mailer.default_url_options = { :host => "joycorn.tk", :protocol => 'https' }
+  config.action_mailer.default_url_options = { :host => "wecorn.com", :protocol => 'https' }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -100,8 +100,8 @@ JoyCorn::Application.configure do
       :port => 465,
       :domain => 'gmail.com',
       :authentication => 'plain',
-      :user_name => 'owenwjowenwj@gmail.com',
-      :password => 'dtl19901019'
+      :user_name => 'admin@wecorn.com',
+      :password => 'wj19901217'
   }
 
   # debug should be turn off.

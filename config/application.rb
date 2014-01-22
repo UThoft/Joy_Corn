@@ -38,6 +38,5 @@ module JoyCorn
     config.app_generators.stylesheet_engine = :sass
 
     #config.serve_static_assets = true
-
   end
 end

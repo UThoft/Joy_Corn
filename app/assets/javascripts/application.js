@@ -17,7 +17,7 @@
 //= require turbolinks
 // require_tree .
 //= require_directory .
+//= require masonry/modernizr-transitions
 //= require masonry/jquery.masonry
 //= require masonry/jquery.imagesloaded.min
 //= require masonry/jquery.infinitescroll
-//= require masonry/modernizr-transitions

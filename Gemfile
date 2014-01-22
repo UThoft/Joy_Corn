@@ -27,6 +27,9 @@ gem "awesome_nested_set", "~> 3.0.0.rc.3" # or same gem
 # pagination
 gem 'kaminari'
 
+# amazon s3 sdk
+gem 'aws-sdk'
+
 
 #group :development, :test do
 #  gem 'rspec-rails', '2.13.1'

@@ -50,7 +50,6 @@
                   <%= q.text_area :link %>
                 </li>
               </ul>
-
           <% end %>
           <%= f.submit 'Add image', :name => "add_image" %>
 
@@ -120,6 +119,10 @@
         </li>
       </ul>
     <% end %>
+  <%= render 'posts/new_image_upload' %>
+  <a href="#" id="real_file_url">
+    Amazon bucket location.
+  </a>
   </div>
 </div>
 
