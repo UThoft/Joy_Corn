@@ -86,6 +86,8 @@ JoyCorn::Application.configure do
 
   config.assets.precompile += ['post_viewer/post_viewer.js', 'post_viewer/post_viewer.css']
 
+  config.assets.precompile += ['jQuery-File-Upload/image_upload.js']
+
   config.assets.compress = true
 
 

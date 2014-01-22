@@ -2,7 +2,6 @@
 //= require jQuery-File-Upload/jquery.iframe-transport
 //= require jQuery-File-Upload/jquery.ui.widget
 //= require jQuery-File-Upload/jquery.fileupload
-//= require jQuery-File-Upload/image_upload
 
 $(function() {
     var file_upload_selector = $('#file_upload');
