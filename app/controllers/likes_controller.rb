@@ -1,9 +1,9 @@
 class LikesController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  def new
-    @like = Like.new
-  end
+  # def new
+  #   @like = Like.new
+  # end
 
   def create
     @like = Like.new(like_params)
